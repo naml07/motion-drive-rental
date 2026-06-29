@@ -6,28 +6,25 @@
     <title>Véhicules — Collection Exécutive | MOTION DRIVE</title>
     <meta name="description" content="Découvrez notre catalogue de véhicules de luxe et blindés à Abidjan, Dakar et Lomé. Location journalière, mensuelle ou avec chauffeur privé.">
     
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="./css/base.css">
+    <!-- CSS Design System -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/components.css">
-    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/catalogue.css">
 </head>
 <body>
 
-    <!-- HEADER / NAVBAR -->
-    <header class="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <span class="logo-text">MOTION <span class="text-copper">DRIVE</span></span>
+    <!-- NAVIGATION -->
+    <header class="navbar" role="banner">
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo" aria-label="Motion Drive Accueil">
+                MOTION<span>DRIVE</span>
             </a>
-
-            <nav class="desktop-nav">
+            
+            <nav class="nav-links" role="navigation" aria-label="Navigation principale">
                 <a href="index.html" class="nav-link">Accueil</a>
                 <a href="catalogue.html" class="nav-link active">Nos Véhicules</a>
                 <a href="services.html" class="nav-link">Services</a>
@@ -38,22 +35,20 @@
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
 
-            <div class="header-actions">
-                <a href="https://wa.me/2250700000000" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Conciergerie WhatsApp</a>
+            <div class="nav-actions" style="display: flex; gap: 12px; align-items: center;">
+                <button type="button" class="btn btn-copper btn-book-modal" data-name="Sélection VIP Motion Drive" data-price="Sur demande" style="display: none; @media(min-width:768px){display:inline-flex;}">Réserver</button>
+                <button class="menu-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-
-            <!-- HAMBURGER -->
-            <button class="mobile-toggle" aria-label="Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </div>
     </header>
 
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu">
-        <nav class="mobile-nav">
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+        <nav class="mobile-nav-links">
             <a href="index.html" class="mobile-nav-link">Accueil</a>
             <a href="catalogue.html" class="mobile-nav-link text-copper">Nos Véhicules</a>
             <a href="services.html" class="mobile-nav-link">Services</a>
@@ -62,472 +57,490 @@
             <a href="faq.html" class="mobile-nav-link">FAQ</a>
             <a href="blog.html" class="mobile-nav-link">Journal</a>
             <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <div style="margin-top: 24px;">
+                <button type="button" class="btn btn-copper btn-book-modal" data-name="Sélection VIP Motion Drive" data-price="Sur demande" style="width: 100%;">Réserver un Véhicule</button>
+            </div>
         </nav>
     </div>
 
-    <!-- PAGE HERO -->
-    <section class="page-hero" aria-labelledby="vehicles-hero-title">
-        <div class="container">
-            <div class="page-hero__label">Notre collection</div>
-            <h1 id="vehicles-hero-title" class="page-hero__title">Véhicules</h1>
-            <p class="page-hero__subtitle">Location courte ou longue durée — accédez à notre sélection de véhicules prestigieux et minutieusement préparés.</p>
-        </div>
-    </section>
+    <!-- MAIN CONTENT -->
+    <main role="main" style="padding-top: 80px;">
 
-    <!-- TRUST BAR (OPTIONS RAPIDES) -->
-    <div class="trust-bar" aria-label="Options de service">
-        <div class="container">
-            <ul class="trust-bar__items" role="list">
-                <li class="trust-bar__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    <div class="trust-bar__item-text"><strong>Location journalière</strong><span>Dès 150 000 FCFA/j</span></div>
-                </li>
-                <li class="trust-bar__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    <div class="trust-bar__item-text"><strong>Location mensuelle</strong><span>Tarifs Corporate dégressifs</span></div>
-                </li>
-                <li class="trust-bar__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    <div class="trust-bar__item-text"><strong>Éditions Blindées VIP</strong><span>Protection B6 / VR7 certifiée</span></div>
-                </li>
-                <li class="trust-bar__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-                    <div class="trust-bar__item-text"><strong>Chauffeur Privé</strong><span>Chauffeurs formés & bilingues</span></div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- CATALOG SECTION -->
-    <section class="section" aria-labelledby="catalog-title" style="padding: var(--space-3xl) 0;">
-        <div class="container">
-            <header class="section-header">
-                <div class="section-label" aria-hidden="true">Notre catalogue</div>
-                <h2 id="catalog-title" class="section-title">Nos véhicules disponibles</h2>
-                <p class="section-subtitle">Choisissez parmi nos catégories de prestige adaptées aux sommets diplomatiques, voyages d'affaires et déplacements sécurisés.</p>
-            </header>
-
-            <!-- FILTERS -->
-            <div class="filter-bar" data-filter-group="vehicles" role="group" aria-label="Filtrer par catégorie">
-                <button class="filter-btn active" data-filter="all" aria-pressed="true">Tous (16)</button>
-                <button class="filter-btn" data-filter="suv" aria-pressed="false">SUV & 4x4 (8)</button>
-                <button class="filter-btn" data-filter="premium" aria-pressed="false">Limousines & Maybach (4)</button>
-                <button class="filter-btn" data-filter="economique" aria-pressed="false">Berlines Exécutives (4)</button>
+        <!-- PAGE HERO -->
+        <section class="page-hero" aria-labelledby="vehicles-hero-title">
+            <div class="container">
+                <div class="page-hero__label">Notre collection</div>
+                <h1 id="vehicles-hero-title" class="page-hero__title">Véhicules</h1>
+                <p class="page-hero__subtitle">Location courte ou longue durée — accédez à notre sélection de véhicules prestigieux et minutieusement préparés.</p>
             </div>
+        </section>
 
-            <!-- GRID CATALOGUE -->
-            <div class="featured-grid" id="vehicles-grid">
-                
-                <!-- 1. Range Rover Sport -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Range Rover Sport Autobiography">
-                        <div class="item-card__badge"><span class="badge badge--orange">Populaire</span></div>
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">Range Rover Sport Autobiography</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places VIP</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">250 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Range Rover Sport Autobiography" data-price="250 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 2. Mercedes Classe E -->
-                <article class="item-card" data-category="economique">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_sedan.png" alt="Mercedes-Benz Classe E">
-                        <div class="item-card__badge"><span class="badge badge--orange">Exécutif</span></div>
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">Berline Exécutive</div>
-                        <h3 class="item-card__title">Mercedes-Benz Classe E Exécutive</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>4 places</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">180 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Mercedes-Benz Classe E Exécutive" data-price="180 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 3. Mercedes GLE 450 -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Mercedes-Benz GLE 450" style="filter: hue-rotate(15deg);">
-                        <div class="item-card__badge"><span class="badge badge--orange">Tech Luxury</span></div>
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">Mercedes-Benz GLE 450 4MATIC</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">220 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Mercedes-Benz GLE 450 4MATIC" data-price="220 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 4. BMW Série 5 -->
-                <article class="item-card" data-category="economique">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_sedan.png" alt="BMW Série 5 Pack M" style="filter: contrast(1.1);">
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">Berline Exécutive</div>
-                        <h3 class="item-card__title">BMW Série 5 Pack M Exécutive</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>4 places</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">170 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="BMW Série 5 Pack M Exécutive" data-price="170 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 5. Mercedes-Maybach S680 -->
-                <article class="item-card" data-category="premium">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_maybach.png" alt="Mercedes-Maybach S680">
-                        <div class="item-card__badge"><span class="badge badge--orange" style="background: #000;">Sommet VIP</span></div>
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">Limousine VIP</div>
-                        <h3 class="item-card__title">Mercedes-Maybach S680 First Class</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>4 places Suite</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>V12 Biturbo</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">450 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Mercedes-Maybach S680 First Class" data-price="450 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 6. Mercedes Classe G 63 AMG -->
-                <article class="item-card" data-category="premium">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_gwagon.png" alt="Mercedes-AMG G63">
-                        <div class="item-card__badge"><span class="badge badge--orange" style="background: #8b0000;">Blindé B6 Available</span></div>
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">Limousine & Cortège VIP</div>
-                        <h3 class="item-card__title">Mercedes-AMG G63 V8 Biturbo</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places VIP</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique 9G</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">350 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Mercedes-AMG G63 V8 Biturbo" data-price="350 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 7. Cadillac Escalade ESV -->
-                <article class="item-card" data-category="premium">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Cadillac Escalade ESV" style="filter: brightness(0.8);">
-                        <div class="item-card__badge"><span class="badge badge--orange">Cortège VIP</span></div>
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">Limousine & Cortège VIP</div>
-                        <h3 class="item-card__title">Cadillac Escalade ESV Platinum</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places VIP</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>V8 6.2L</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">300 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Cadillac Escalade ESV Platinum" data-price="300 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 8. Porsche Cayenne Coupé -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Porsche Cayenne Coupé" style="filter: hue-rotate(200deg);">
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">Porsche Cayenne Coupé E-Hybrid</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Tiptronic S</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">240 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Porsche Cayenne Coupé E-Hybrid" data-price="240 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 9. Audi Q8 S-Line -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Audi Q8 S-Line" style="filter: invert(0.1);">
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">Audi Q8 50 TDI S-Line Quattro</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Tiptronic</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">210 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Audi Q8 50 TDI S-Line Quattro" data-price="210 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 10. Lexus LX 600 VIP -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Lexus LX 600">
-                        <div class="item-card__badge"><span class="badge badge--orange">Haute Sécurité</span></div>
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">Lexus LX 600 F-Sport Executive</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places VIP</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Direct Shift</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">280 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Lexus LX 600 F-Sport Executive" data-price="280 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 11. Tesla Model X Plaid -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Tesla Model X Plaid" style="filter: sepia(0.3);">
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">Tesla Model X Plaid 1020ch</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>6 places</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>100% Électrique</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">230 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Tesla Model X Plaid 1020ch" data-price="230 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 12. Rolls-Royce Cullinan -->
-                <article class="item-card" data-category="premium">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_maybach.png" alt="Rolls-Royce Cullinan" style="filter: contrast(1.2);">
-                        <div class="item-card__badge"><span class="badge badge--orange" style="background: #111;">Ultime Luxe</span></div>
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">Limousine & Cortège VIP</div>
-                        <h3 class="item-card__title">Rolls-Royce Cullinan Black Badge</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>4 places Royale</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>V12 6.75L</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">650 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Rolls-Royce Cullinan Black Badge" data-price="650 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 13. Range Rover Velar -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Range Rover Velar">
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">Range Rover Velar R-Dynamic</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">190 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Range Rover Velar R-Dynamic" data-price="190 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 14. BMW X7 M60i -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="BMW X7 M60i" style="filter: saturate(1.2);">
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">BMW X7 M60i xDrive Exécutive</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places VIP</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Steptronic Sport</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">260 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="BMW X7 M60i xDrive Exécutive" data-price="260 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 15. Toyota Land Cruiser 300 -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Toyota Land Cruiser 300" style="filter: hue-rotate(60deg);">
-                        <div class="item-card__badge"><span class="badge badge--orange">Diplomatique</span></div>
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">Toyota Land Cruiser 300 ZX V6</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Auto 10 Rapports</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">200 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Toyota Land Cruiser 300 ZX V6" data-price="200 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 16. Land Rover Defender 110 -->
-                <article class="item-card" data-category="suv">
-                    <div class="item-card__image">
-                        <img src="./assets/images/fleet_suv.png" alt="Land Rover Defender 110" style="filter: sepia(0.2) contrast(1.1);">
-                    </div>
-                    <div class="item-card__body">
-                        <div class="item-card__category">SUV 4x4 de Prestige</div>
-                        <h3 class="item-card__title">Land Rover Defender 110 X-Dynamic</h3>
-                        <div class="item-card__meta">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique 8G</span>
-                        </div>
-                        <div class="item-card__footer">
-                            <div>
-                                <div class="item-card__price">210 000 <abbr title="Francs CFA">FCFA</abbr></div>
-                                <div class="item-card__price-label">par jour</div>
-                            </div>
-                            <button type="button" class="btn btn-book-modal" data-name="Land Rover Defender 110 X-Dynamic" data-price="210 000 FCFA">Réserver</button>
-                        </div>
-                    </div>
-                </article>
-
+        <!-- TRUST BAR (OPTIONS RAPIDES) -->
+        <div class="trust-bar" aria-label="Options de service">
+            <div class="container">
+                <ul class="trust-bar__items" role="list">
+                    <li class="trust-bar__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <div class="trust-bar__item-text"><strong>Location journalière</strong><span>Dès 150 000 FCFA/j</span></div>
+                    </li>
+                    <li class="trust-bar__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        <div class="trust-bar__item-text"><strong>Location mensuelle</strong><span>Tarifs Corporate dégressifs</span></div>
+                    </li>
+                    <li class="trust-bar__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        <div class="trust-bar__item-text"><strong>Éditions Blindées VIP</strong><span>Protection B6 / VR7 certifiée</span></div>
+                    </li>
+                    <li class="trust-bar__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                        <div class="trust-bar__item-text"><strong>Chauffeur Privé</strong><span>Chauffeurs formés & bilingues</span></div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+
+        <!-- CATALOG SECTION -->
+        <section class="section" aria-labelledby="catalog-title" style="padding: var(--space-3xl) 0;">
+            <div class="container">
+                <header class="section-header">
+                    <div class="section-label" aria-hidden="true">Notre catalogue</div>
+                    <h2 id="catalog-title" class="section-title">Nos véhicules disponibles</h2>
+                    <p class="section-subtitle">Choisissez parmi nos catégories de prestige adaptées aux sommets diplomatiques, voyages d'affaires et déplacements sécurisés.</p>
+                </header>
+
+                <!-- FILTERS -->
+                <div class="filter-bar" data-filter-group="vehicles" role="group" aria-label="Filtrer par catégorie">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">Tous (16)</button>
+                    <button class="filter-btn" data-filter="suv" aria-pressed="false">SUV & 4x4 (8)</button>
+                    <button class="filter-btn" data-filter="premium" aria-pressed="false">Limousines & Maybach (4)</button>
+                    <button class="filter-btn" data-filter="economique" aria-pressed="false">Berlines Exécutives (4)</button>
+                </div>
+
+                <!-- GRID CATALOGUE -->
+                <div class="featured-grid" id="vehicles-grid">
+                    
+                    <!-- 1. Range Rover Sport -->
+                    <article class="item-card" data-category="suv" data-name="Range Rover Sport Autobiography" data-price="250 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Range Rover Sport Autobiography">
+                            <div class="item-card__badge"><span class="badge badge--orange">Populaire</span></div>
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">Range Rover Sport Autobiography</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places VIP</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">250 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Range Rover Sport Autobiography" data-price="250 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2. Mercedes Classe E -->
+                    <article class="item-card" data-category="economique" data-name="Mercedes-Benz Classe E Exécutive" data-price="180 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_sedan.png" alt="Mercedes-Benz Classe E">
+                            <div class="item-card__badge"><span class="badge badge--orange">Exécutif</span></div>
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">Berline Exécutive</div>
+                            <h3 class="item-card__title">Mercedes-Benz Classe E Exécutive</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>4 places</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">180 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Mercedes-Benz Classe E Exécutive" data-price="180 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 3. Mercedes GLE 450 -->
+                    <article class="item-card" data-category="suv" data-name="Mercedes-Benz GLE 450 4MATIC" data-price="220 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Mercedes-Benz GLE 450" style="filter: hue-rotate(15deg);">
+                            <div class="item-card__badge"><span class="badge badge--orange">Tech Luxury</span></div>
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">Mercedes-Benz GLE 450 4MATIC</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">220 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Mercedes-Benz GLE 450 4MATIC" data-price="220 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 4. BMW Série 5 -->
+                    <article class="item-card" data-category="economique" data-name="BMW Série 5 Pack M Exécutive" data-price="170 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_sedan.png" alt="BMW Série 5 Pack M" style="filter: contrast(1.1);">
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">Berline Exécutive</div>
+                            <h3 class="item-card__title">BMW Série 5 Pack M Exécutive</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>4 places</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">170 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="BMW Série 5 Pack M Exécutive" data-price="170 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 5. Mercedes-Maybach S680 -->
+                    <article class="item-card" data-category="premium" data-name="Mercedes-Maybach S680 First Class" data-price="450 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_maybach.png" alt="Mercedes-Maybach S680">
+                            <div class="item-card__badge"><span class="badge badge--orange" style="background: #000;">Sommet VIP</span></div>
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">Limousine VIP</div>
+                            <h3 class="item-card__title">Mercedes-Maybach S680 First Class</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>4 places Suite</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>V12 Biturbo</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">450 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Mercedes-Maybach S680 First Class" data-price="450 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 6. Mercedes Classe G 63 AMG -->
+                    <article class="item-card" data-category="premium" data-name="Mercedes-AMG G63 V8 Biturbo" data-price="350 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_gwagon.png" alt="Mercedes-AMG G63">
+                            <div class="item-card__badge"><span class="badge badge--orange" style="background: #8b0000;">Blindé B6 Available</span></div>
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">Limousine & Cortège VIP</div>
+                            <h3 class="item-card__title">Mercedes-AMG G63 V8 Biturbo</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places VIP</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique 9G</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">350 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Mercedes-AMG G63 V8 Biturbo" data-price="350 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 7. Cadillac Escalade ESV -->
+                    <article class="item-card" data-category="premium" data-name="Cadillac Escalade ESV Platinum" data-price="300 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Cadillac Escalade ESV" style="filter: brightness(0.8);">
+                            <div class="item-card__badge"><span class="badge badge--orange">Cortège VIP</span></div>
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">Limousine & Cortège VIP</div>
+                            <h3 class="item-card__title">Cadillac Escalade ESV Platinum</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places VIP</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>V8 6.2L</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">300 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Cadillac Escalade ESV Platinum" data-price="300 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 8. Porsche Cayenne Coupé -->
+                    <article class="item-card" data-category="suv" data-name="Porsche Cayenne Coupé E-Hybrid" data-price="240 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Porsche Cayenne Coupé" style="filter: hue-rotate(200deg);">
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">Porsche Cayenne Coupé E-Hybrid</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Tiptronic S</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">240 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Porsche Cayenne Coupé E-Hybrid" data-price="240 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 9. Audi Q8 S-Line -->
+                    <article class="item-card" data-category="suv" data-name="Audi Q8 50 TDI S-Line Quattro" data-price="210 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Audi Q8 S-Line" style="filter: invert(0.1);">
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">Audi Q8 50 TDI S-Line Quattro</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Tiptronic</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">210 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Audi Q8 50 TDI S-Line Quattro" data-price="210 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 10. Lexus LX 600 VIP -->
+                    <article class="item-card" data-category="suv" data-name="Lexus LX 600 F-Sport Executive" data-price="280 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Lexus LX 600">
+                            <div class="item-card__badge"><span class="badge badge--orange">Haute Sécurité</span></div>
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">Lexus LX 600 F-Sport Executive</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places VIP</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Direct Shift</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">280 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Lexus LX 600 F-Sport Executive" data-price="280 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 11. Tesla Model X Plaid -->
+                    <article class="item-card" data-category="suv" data-name="Tesla Model X Plaid 1020ch" data-price="230 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Tesla Model X Plaid" style="filter: sepia(0.3);">
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">Tesla Model X Plaid 1020ch</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>6 places</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>100% Électrique</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">230 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Tesla Model X Plaid 1020ch" data-price="230 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 12. Rolls-Royce Cullinan -->
+                    <article class="item-card" data-category="premium" data-name="Rolls-Royce Cullinan Black Badge" data-price="650 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_maybach.png" alt="Rolls-Royce Cullinan" style="filter: contrast(1.2);">
+                            <div class="item-card__badge"><span class="badge badge--orange" style="background: #111;">Ultime Luxe</span></div>
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">Limousine & Cortège VIP</div>
+                            <h3 class="item-card__title">Rolls-Royce Cullinan Black Badge</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>4 places Royale</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>V12 6.75L</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">650 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Rolls-Royce Cullinan Black Badge" data-price="650 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 13. Range Rover Velar -->
+                    <article class="item-card" data-category="suv" data-name="Range Rover Velar R-Dynamic" data-price="190 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Range Rover Velar">
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">Range Rover Velar R-Dynamic</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">190 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Range Rover Velar R-Dynamic" data-price="190 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 14. BMW X7 M60i -->
+                    <article class="item-card" data-category="suv" data-name="BMW X7 M60i xDrive Exécutive" data-price="260 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="BMW X7 M60i" style="filter: saturate(1.2);">
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">BMW X7 M60i xDrive Exécutive</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places VIP</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Steptronic Sport</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">260 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="BMW X7 M60i xDrive Exécutive" data-price="260 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 15. Toyota Land Cruiser 300 -->
+                    <article class="item-card" data-category="suv" data-name="Toyota Land Cruiser 300 ZX V6" data-price="200 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Toyota Land Cruiser 300" style="filter: hue-rotate(60deg);">
+                            <div class="item-card__badge"><span class="badge badge--orange">Diplomatique</span></div>
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">Toyota Land Cruiser 300 ZX V6</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>7 places</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Auto 10 Rapports</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">200 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Toyota Land Cruiser 300 ZX V6" data-price="200 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 16. Land Rover Defender 110 -->
+                    <article class="item-card" data-category="suv" data-name="Land Rover Defender 110 X-Dynamic" data-price="210 000 FCFA">
+                        <div class="item-card__image">
+                            <img src="./assets/images/fleet_suv.png" alt="Land Rover Defender 110" style="filter: sepia(0.2) contrast(1.1);">
+                        </div>
+                        <div class="item-card__body">
+                            <div class="item-card__category">SUV 4x4 de Prestige</div>
+                            <h3 class="item-card__title">Land Rover Defender 110 X-Dynamic</h3>
+                            <div class="item-card__meta">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>5 places</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatique 8G</span>
+                            </div>
+                            <div class="item-card__footer">
+                                <div>
+                                    <div class="item-card__price">210 000 <abbr title="Francs CFA">FCFA</abbr></div>
+                                    <div class="item-card__price-label">par jour</div>
+                                </div>
+                                <button type="button" class="btn btn-book-modal" data-name="Land Rover Defender 110 X-Dynamic" data-price="210 000 FCFA">Réserver</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <span class="logo-text">MOTION <span class="text-copper">DRIVE</span></span>
-                <p class="text-stone" style="margin-top: 16px; font-size: var(--text-sm);">L'excellence de la mobilité en Afrique de l'Ouest. Location de véhicules de luxe, flottes institutionnelles et escortes diplomatiques à Abidjan, Dakar et Lomé.</p>
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md); display: inline-block;">MOTION<span>DRIVE</span></a>
+                    <p style="color: var(--color-stone-light); max-width: 320px;">La première agence de location automobile de prestige d'Afrique de l'Ouest, conçue pour les esprits exigeants et les leaders en mouvement.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="catalogue.html">Nos Véhicules</a>
+                        <a href="services.html">Services Exécutifs</a>
+                        <a href="corporate.html">Offres Entreprises</a>
+                        <a href="about.html">À Propos</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <div class="footer-links">
+                        <a href="faq.html">Foire Aux Questions</a>
+                        <a href="blog.html">Journal de la Mobilité</a>
+                        <a href="contact.html">Assistance VIP</a>
+                        <a href="#">Conditions Générales</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Conciergerie 24/7</h4>
+                    <p style="color: var(--color-stone-light); margin-bottom: var(--space-xs);">Abidjan, Côte d'Ivoire</p>
+                    <div style="font-size: var(--text-lg); font-weight: 700; color: white; margin-bottom: var(--space-sm);">+225 07 00 00 00 00</div>
+                    <a href="https://wa.me/2250700000000" target="_blank" rel="noopener noreferrer" class="btn btn-copper" style="min-height: 44px; font-size: var(--text-xs);">Discussion WhatsApp Directe</a>
+                </div>
             </div>
-
-            <div class="footer-col">
-                <span class="footer-heading">Navigation</span>
-                <ul class="footer-links">
-                    <li><a href="catalogue.html">Nos Véhicules</a></li>
-                    <li><a href="services.html">Services Exécutifs</a></li>
-                    <li><a href="corporate.html">Entreprises & ONG</a></li>
-                    <li><a href="about.html">Notre Histoire</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <span class="footer-heading">Hubs Régionaux</span>
-                <ul class="footer-links">
-                    <li><span class="text-white">Abidjan, Côte d'Ivoire</span></li>
-                    <li><span class="text-white">Dakar, Sénégal</span></li>
-                    <li><span class="text-white">Lomé, Togo</span></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <span class="footer-heading">Conciergerie 24/7</span>
-                <p class="text-stone" style="font-size: var(--text-sm); margin-bottom: 12px;">Assistance immédiate et réservation urgente :</p>
-                <a href="https://wa.me/2250700000000" class="text-copper" style="font-weight: 700; font-size: var(--text-lg); display: block;">+225 07 00 00 00 00</a>
-            </div>
-        </div>
-
-        <div class="container footer-bottom">
-            <p>&copy; 2026 MOTION DRIVE WEST AFRICA. Tous droits réservés.</p>
-            <div class="legal-links">
-                <a href="#">Confidentialité</a>
-                <a href="#">Mentions Légales</a>
-                <a href="#">Sécurité B6/VR7</a>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Motion Drive Africa. Tous droits réservés. Designed for flagship excellence.</div>
+                <div style="display: flex; gap: var(--space-md);">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Plan du Site</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JS -->
+    <!-- FLOATING WHATSAPP ASSISTANCE WIDGET -->
+    <div class="floating-help-widget">
+        <div class="floating-help-text">Need Help / Besoin d'aide ?</div>
+        <a href="https://wa.me/2250700000000" target="_blank" class="floating-whatsapp-btn" aria-label="Assistance WhatsApp 24/7">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.289.058.39-.058c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.392-10.416c-4.418 0-8 3.582-8 8 0 1.411.368 2.738 1.025 3.896l-1.09 3.989 4.091-1.071c1.118.614 2.399.963 3.766.963 4.417 0 8-3.582 8-8s-3.583-8-8-8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
     <script src="./js/main.js"></script>
     <script src="./js/catalogue.js"></script>
 </body>

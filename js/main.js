@@ -225,33 +225,27 @@ function initUniversalBookingModal() {
             return;
         }
 
-        // Check if clicked element is a reserve button or link
-        const btn = target.closest('.btn-book-modal') || target.closest('a[href*="catalogue.html"], a[href*="flotte.html"]') || target.closest('button, .btn');
+        // Check if clicked element is a booking button or CTA
+        const bookBtn = target.closest('.btn-book-modal');
+        const anyBtn = target.closest('button, .btn, a');
         const card = target.closest('.clickable-card, .fleet-card, .mag-card');
 
-        // If clicking navigation menu links, let them navigate naturally unless it's a booking CTA
-        if (btn && btn.classList.contains('nav-link') && !btn.textContent.toLowerCase().includes('réserver')) {
-            return;
-        }
-        if (btn && btn.classList.contains('mobile-nav-link') && !btn.textContent.toLowerCase().includes('réserver')) {
-            return;
-        }
-
-        // If clicking a "Réserver" button or link
-        if (btn && (btn.textContent.toLowerCase().includes('réserver') || btn.classList.contains('btn-book-modal') || btn.getAttribute('href')?.includes('catalogue.html'))) {
+        // If explicitly a book modal button or button/link containing 'réserver' (excluding nav links)
+        if (bookBtn || (anyBtn && anyBtn.textContent.toLowerCase().includes('réserver') && !anyBtn.classList.contains('nav-link') && !anyBtn.classList.contains('mobile-nav-link'))) {
             e.preventDefault();
             e.stopPropagation();
-            const carName = btn.getAttribute('data-name') || card?.getAttribute('data-name') || card?.querySelector('h3')?.textContent || 'Véhicule Exécutif Motion Drive';
-            const carPrice = btn.getAttribute('data-price') || card?.getAttribute('data-price') || card?.querySelector('.text-xl, .text-2xl')?.textContent?.split('/')[0]?.trim() || 'Tarif Corporate';
+            const activeEl = bookBtn || anyBtn;
+            const carName = activeEl.getAttribute('data-name') || card?.getAttribute('data-name') || card?.querySelector('h3')?.textContent || 'Véhicule Exécutif Motion Drive';
+            const carPrice = activeEl.getAttribute('data-price') || card?.getAttribute('data-price') || card?.querySelector('.text-xl, .text-2xl')?.textContent?.split('/')[0]?.trim() || 'Sur demande';
             openModal(carName, carPrice);
             return;
         }
 
-        // If clicking anywhere on a car card
+        // If clicking anywhere on a clickable car card (from old layout if present)
         if (card) {
             e.preventDefault();
             const carName = card.getAttribute('data-name') || card.querySelector('h3')?.textContent || 'Véhicule de Prestige';
-            const carPrice = card.getAttribute('data-price') || card.querySelector('.text-xl, .text-2xl')?.textContent?.split('/')[0]?.trim() || 'Tarif Corporate';
+            const carPrice = card.getAttribute('data-price') || card.querySelector('.text-xl, .text-2xl')?.textContent?.split('/')[0]?.trim() || 'Sur demande';
             openModal(carName, carPrice);
         }
     });
