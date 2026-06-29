@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foire Aux Questions — Assistance Motion Drive</title>
+    <meta name="description" content="Trouvez toutes les réponses à vos questions sur les conditions de location, le dépôt de garantie, l'assurance et le franchissement des frontières en Afrique de l'Ouest.">
+    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/faq.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar scrolled">
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">MOTION<span>DRIVE</span></a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="flotte.html" class="nav-link">Notre Flotte</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="corporate.html" class="nav-link">Entreprises & ONG</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="faq.html" class="nav-link active">FAQ</a>
+                <a href="blog.html" class="nav-link">Journal</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; gap: 12px; align-items: center;">
+                <a href="contact.html" class="btn btn-copper" style="display: none; @media(min-width:768px){display:inline-flex;}">Assistance VIP</a>
+                <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <a href="flotte.html" class="mobile-nav-link">Notre Flotte</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="corporate.html" class="mobile-nav-link">Entreprises & ONG</a>
+            <a href="about.html" class="mobile-nav-link">À Propos</a>
+            <a href="faq.html" class="mobile-nav-link text-copper">FAQ</a>
+            <a href="blog.html" class="mobile-nav-link">Journal</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="faq-hero">
+        <div class="container reveal">
+            <span class="text-caption" style="color: var(--color-copper-light);">Centre de Documentation & Aide</span>
+            <h1 class="text-display" style="color: white; margin-bottom: var(--space-sm);">Foire Aux Questions</h1>
+            <p class="text-lead" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">Recherchez instantanément parmi nos réponses concernant les réservations, assurances et conditions de transport.</p>
+            
+            <div class="search-faq-container">
+                <input type="text" id="faq-search" class="search-faq-input" placeholder="Tapez un mot-clé (ex: garantie, chauffeur, frontière...)" aria-label="Rechercher dans la FAQ">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ CONTENT -->
+    <main class="faq-content">
+        <div class="container">
+            
+            <h2 class="faq-category-title">Réservation & Documents</h2>
+            <div class="accordion">
+                <div class="accordion-item faq-item">
+                    <button class="accordion-header">Quels sont les modes de paiement acceptés ? <span class="accordion-icon">+</span></button>
+                    <div class="accordion-body">
+                        <p>Nous acceptons les virements bancaires internationaux, les cartes Visa/Mastercard/American Express, ainsi que les paiements Mobile Money (Orange Money, MTN, Moov, Wave) pour les acomptes. Pour les comptes corporate accrédités, le règlement s'effectue par facture à 30 jours.</p>
+                    </div>
+                </div>
+                <div class="accordion-item faq-item">
+                    <button class="accordion-header">Comment fonctionne le dépôt de garantie ? <span class="accordion-icon">+</span></button>
+                    <div class="accordion-body">
+                        <p>Une pré-autorisation bancaire (non débitée) est demandée au moment de la mise à disposition du véhicule. Son montant varie selon la catégorie du véhicule loué. Elle est intégralement libérée à la restitution après état des lieux conforme.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="faq-category-title">Assurance & Franchissement de Frontière</h2>
+            <div class="accordion">
+                <div class="accordion-item faq-item">
+                    <button class="accordion-header">Puis-je traverser les frontières (CEDEAO) avec le véhicule ? <span class="accordion-icon">+</span></button>
+                    <div class="accordion-body">
+                        <p>Le franchissement de frontière (par exemple entre la Côte d'Ivoire, le Ghana, le Togo et le Bénin) est formellement autorisé uniquement sur demande préalable lors de la réservation. Nous délivrons alors un laissez-passer officiel et étendons la couverture d'assurance régionale.</p>
+                    </div>
+                </div>
+                <div class="accordion-item faq-item">
+                    <button class="accordion-header">Quelle est la couverture d'assurance incluse ? <span class="accordion-icon">+</span></button>
+                    <div class="accordion-body">
+                        <p>Tous nos tarifs intègrent une assurance Tous Risques professionnelle avec franchise, couvrant la responsabilité civile, le vol, l'incendie et les dommages collision. Une option d'exonération totale de franchise est disponible en supplément.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md); display: inline-block;">MOTION<span>DRIVE</span></a>
+                    <p style="color: var(--color-stone-light);">L'excellence du transport de prestige en Afrique francophone.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="flotte.html">Notre Flotte</a>
+                        <a href="services.html">Services Exécutifs</a>
+                        <a href="contact.html">Assistance Conciergerie</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Conciergerie 24/7</h4>
+                    <div style="font-size: var(--text-lg); font-weight: 700; color: white; margin: var(--space-xs) 0 var(--space-sm);">+225 07 00 00 00 00</div>
+                    <a href="https://wa.me/2250700000000" target="_blank" class="btn btn-copper" style="min-height: 44px;">WhatsApp Direct</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Motion Drive Africa. Tous droits réservés.</div>
+                <div>Designed for flagship agency presentation.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/faq.js"></script>
+    <script>
+        // Live search filter
+        document.getElementById('faq-search')?.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const text = item.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
