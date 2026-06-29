@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Flotte de Prestige — Motion Drive</title>
+    <meta name="description" content="Explorez notre collection de véhicules premium disponibles à la location en Afrique de l'Ouest : SUV de luxe blindés, berlines diplomatiques et vans VIP.">
+    
+    <!-- CSS Design System -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/fleet.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar scrolled" role="banner">
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">MOTION<span>DRIVE</span></a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="flotte.html" class="nav-link active">Notre Flotte</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="corporate.html" class="nav-link">Entreprises & ONG</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="blog.html" class="nav-link">Journal</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions" style="display: flex; gap: 12px; align-items: center;">
+                <a href="contact.html" class="btn btn-copper" style="display: none; @media(min-width:768px){display:inline-flex;}">Assistance VIP</a>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <a href="flotte.html" class="mobile-nav-link text-copper">Notre Flotte</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="corporate.html" class="mobile-nav-link">Entreprises & ONG</a>
+            <a href="about.html" class="mobile-nav-link">À Propos</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            <a href="blog.html" class="mobile-nav-link">Journal</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- FLEET HEADER -->
+    <section class="fleet-header">
+        <div class="container reveal">
+            <span class="text-caption" style="color: var(--color-copper-light);">Sélection Magazine</span>
+            <h1 class="text-display" style="color: white; margin-bottom: var(--space-sm);">La Flotte Exécutive</h1>
+            <p class="text-lead" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">Sélectionnez deux véhicules pour comparer leurs spécifications techniques et réserver en toute sérénité.</p>
+        </div>
+    </section>
+
+    <!-- FILTERS BAR -->
+    <section class="filters-section" role="search" aria-label="Filtres de flotte">
+        <div class="container filters-wrapper">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">Toute la collection (6)</button>
+                <button class="filter-btn" data-filter="suv">SUV 4x4 de Prestige (3)</button>
+                <button class="filter-btn" data-filter="sedan">Berlines Exécutives (2)</button>
+                <button class="filter-btn" data-filter="van">Vans & Cortèges (1)</button>
+            </div>
+            
+            <div class="filter-group">
+                <select id="filter-trans" class="filter-select" aria-label="Filtrer par transmission">
+                    <option value="all">Transmission : Toutes</option>
+                    <option value="auto">Automatique 9G-Tronic</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLEET MAGAZINE GRID -->
+    <main class="fleet-magazine">
+        <div class="container">
+            <div class="magazine-grid">
+                
+                <!-- Vehicle 1 -->
+                <article class="mag-card reveal" data-category="suv" data-transmission="auto">
+                    <div class="mag-img">
+                        <span class="badge" style="position: absolute; top: 16px; right: 16px; z-index: 2;">Disponibilité Immédiate</span>
+                        <img src="./assets/images/fleet_suv.png" alt="Range Rover Sport Autobiography">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">SUV 4x4 Luxe</span>
+                            <label class="compare-toggle">
+                                <input type="checkbox" class="compare-checkbox" data-name="Range Rover Sport" data-price="250 000" data-motor="V6 3.0L Twin-Turbo" data-places="5"> Comparer
+                            </label>
+                        </div>
+                        <h3>Range Rover Sport Autobiography</h3>
+                        <p>L'icône absolue du statut et de l'aisance tout-terrain. Intérieur en cuir Windsor semi-aniline, système audio Meridian Surround et suspension pneumatique active.</p>
+                        
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">3.0L V6 400ch</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">Auto 8 Rapports</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">5 Places VIP</span></div>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">250 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <a href="contact.html?vehicle=Range%20Rover%20Sport" class="btn btn-primary">Réserver</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 2 -->
+                <article class="mag-card reveal reveal-delay-1" data-category="sedan" data-transmission="auto">
+                    <div class="mag-img">
+                        <span class="badge" style="position: absolute; top: 16px; right: 16px; z-index: 2; background: var(--color-graphite); color: white;">Chauffeur Recommandé</span>
+                        <img src="./assets/images/fleet_sedan.png" alt="Mercedes-Benz Classe E 300">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Berline Diplomatique</span>
+                            <label class="compare-toggle">
+                                <input type="checkbox" class="compare-checkbox" data-name="Mercedes Classe E" data-price="180 000" data-motor="2.0L Turbo Hybride" data-places="4"> Comparer
+                            </label>
+                        </div>
+                        <h3>Mercedes-Benz Classe E Exécutive</h3>
+                        <p>Le standard international des délégations et sommets d'affaires. Isolation phonique maximale, vitres arrière teintées et espace de travail ergonomique.</p>
+                        
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">258ch Hybride</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">9G-Tronic Auto</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places Confort</span></div>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">180 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <a href="contact.html?vehicle=Mercedes%20Classe%20E" class="btn btn-primary">Réserver</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 3 -->
+                <article class="mag-card reveal" data-category="suv" data-transmission="auto">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_suv.png" alt="Mercedes-Benz GLE 450 4MATIC" style="filter: hue-rotate(15deg);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">SUV Tech Luxury</span>
+                            <label class="compare-toggle">
+                                <input type="checkbox" class="compare-checkbox" data-name="Mercedes GLE 450" data-price="220 000" data-motor="3.0L EQ Boost V6" data-places="7"> Comparer
+                            </label>
+                        </div>
+                        <h3>Mercedes-Benz GLE 450 4MATIC</h3>
+                        <p>Une intelligence embarquée impressionnante avec l'interface MBUX panoramique. Modularité 7 places et transmission intégrale permanente pour les terrains exigeants.</p>
+                        
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">367ch EQ Boost</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">4MATIC Intégrale</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">7 Places Modulables</span></div>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">220 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <a href="contact.html?vehicle=Mercedes%20GLE%20450" class="btn btn-primary">Réserver</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 4 -->
+                <article class="mag-card reveal reveal-delay-1" data-category="sedan" data-transmission="auto">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_sedan.png" alt="BMW Série 5 Pack M" style="filter: contrast(1.1);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Berline Sportive Exécutive</span>
+                            <label class="compare-toggle">
+                                <input type="checkbox" class="compare-checkbox" data-name="BMW Série 5" data-price="170 000" data-motor="2.0L TwinPower Turbo" data-places="4"> Comparer
+                            </label>
+                        </div>
+                        <h3>BMW Série 5 Pack M Exécutive</h3>
+                        <p>Le plaisir de conduite dynamique marié à une prestance institutionnelle incomparable. Châssis adaptatif, affichage tête haute et cuir Dakota.</p>
+                        
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">252ch TwinPower</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">Steptronic Sport</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places Confort</span></div>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">170 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <a href="contact.html?vehicle=BMW%20Serie%205" class="btn btn-primary">Réserver</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FLOATING COMPARISON BAR -->
+    <div id="compare-bar" class="compare-bar">
+        <div class="container compare-bar-inner">
+            <div style="display: flex; align-items: center; gap: var(--space-sm);">
+                <span style="font-weight: 700; font-size: var(--text-sm);"><span id="compare-count" style="color: var(--color-copper);">0</span> véhicule(s) sélectionné(s) :</span>
+                <div id="compare-names" class="compare-list"></div>
+            </div>
+            <button id="open-compare-modal" class="btn btn-copper" style="min-height: 40px; padding: 0 24px;">Lancer le face-à-face</button>
+        </div>
+    </div>
+
+    <!-- COMPARISON MODAL -->
+    <div id="compare-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Comparateur de véhicules">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Fermer la fenêtre">&times;</button>
+            <span class="text-caption">Analyse Comparative</span>
+            <h2 style="margin-bottom: var(--space-lg);">Face-à-Face Exécutif</h2>
+            
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <tbody id="compare-table-body">
+                        <!-- dynamically rendered -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md); display: inline-block;">MOTION<span>DRIVE</span></a>
+                    <p style="color: var(--color-stone-light);">La référence absolue de la mobilité de prestige pour les institutions, entreprises et voyageurs d'élite en Afrique de l'Ouest.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Accueil</a>
+                        <a href="services.html">Services Exécutifs</a>
+                        <a href="corporate.html">Offres Entreprises</a>
+                        <a href="contact.html">Assistance Conciergerie</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Conciergerie 24/7</h4>
+                    <div style="font-size: var(--text-lg); font-weight: 700; color: white; margin: var(--space-xs) 0 var(--space-sm);">+225 07 00 00 00 00</div>
+                    <a href="https://wa.me/2250700000000" target="_blank" class="btn btn-copper" style="min-height: 44px;">WhatsApp Direct</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Motion Drive Africa. Tous droits réservés.</div>
+                <div>Designed for flagship agency presentation.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/fleet.js"></script>
+</body>
+</html>
