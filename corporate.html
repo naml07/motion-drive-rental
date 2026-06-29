@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions Entreprises, Hôtels & ONG — Motion Drive</title>
+    <meta name="description" content="Partenariats de mobilité sur-mesure pour entreprises, délégations diplomatiques, hôtels 5 étoiles et ONG en Afrique de l'Ouest. Facturation centralisée et conciergerie dédiée.">
+    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/corporate.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar scrolled">
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">MOTION<span>DRIVE</span></a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="flotte.html" class="nav-link">Notre Flotte</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="corporate.html" class="nav-link active">Entreprises & ONG</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="blog.html" class="nav-link">Journal</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; gap: 12px; align-items: center;">
+                <a href="#devis-form" class="btn btn-copper" style="display: none; @media(min-width:768px){display:inline-flex;}">Ouvrir un Compte</a>
+                <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <a href="flotte.html" class="mobile-nav-link">Notre Flotte</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="corporate.html" class="mobile-nav-link text-copper">Entreprises & ONG</a>
+            <a href="about.html" class="mobile-nav-link">À Propos</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            <a href="blog.html" class="mobile-nav-link">Journal</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="corp-hero">
+        <div class="container reveal">
+            <span class="text-caption" style="color: var(--color-copper-light);">Division B2B & Missions Institutionnelles</span>
+            <h1 class="text-display" style="color: white; margin-bottom: var(--space-sm);">Le Partenaire Mobilité des Leaders</h1>
+            <p class="text-lead" style="color: rgba(255,255,255,0.8); max-width: 750px;">Libérez votre organisation des contraintes logistiques. Nous offrons des comptes entreprises centralisés, une flexibilité absolue et une conformité aux standards de sécurité internationaux.</p>
+            
+            <div class="corp-stats-grid">
+                <div class="corp-stat-card">
+                    <div style="font-size: var(--text-3xl); font-weight: 800; color: var(--color-copper); font-family: var(--font-display);">-30%</div>
+                    <div style="font-size: var(--text-sm); color: rgba(255,255,255,0.8);">D'économie moyenne constatée par rapport à la gestion d'une flotte interne.</div>
+                </div>
+                <div class="corp-stat-card">
+                    <div style="font-size: var(--text-3xl); font-weight: 800; color: var(--color-copper); font-family: var(--font-display);">100%</div>
+                    <div style="font-size: var(--text-sm); color: rgba(255,255,255,0.8);">Deductibilité fiscale et facturation mensuelle unique et transparente.</div>
+                </div>
+                <div class="corp-stat-card">
+                    <div style="font-size: var(--text-3xl); font-weight: 800; color: var(--color-copper); font-family: var(--font-display);">45 min</div>
+                    <div style="font-size: var(--text-sm); color: rgba(255,255,255,0.8);">Délai garanti de remplacement de véhicule partout dans nos zones d'intervention.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section id="devis-form" class="corp-form-section">
+        <div class="container">
+            <div class="corp-form-container reveal">
+                <span class="text-caption" style="text-align: center;">Demande d'Accréditation</span>
+                <h2 style="text-align: center; margin-bottom: var(--space-lg);">Ouvrir un Compte Corporate</h2>
+                
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Votre demande d\'accréditation corporate a été transmise au secrétariat général de Motion Drive.');">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Nom de l'Organisation / ONG / Hôtel</label>
+                            <input type="text" class="form-control" required placeholder="ex: Banque Ouest-Africaine...">
+                        </div>
+                        <div class="form-group">
+                            <label>Secteur d'Activité</label>
+                            <select class="form-control">
+                                <option>Institution / Ambassade / ONG</option>
+                                <option>Grand Groupe / Multinationale</option>
+                                <option>Hôtellerie de Luxe</option>
+                                <option>Cabinet de Conseil / Finance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Nom du Contact Exécutif</label>
+                            <input type="text" class="form-control" required placeholder="M. / Mme...">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Professionnel</label>
+                            <input type="email" class="form-control" required placeholder="contact@organisation.org">
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone / WhatsApp</label>
+                            <input type="tel" class="form-control" required placeholder="+225 ...">
+                        </div>
+                        <div class="form-group">
+                            <label>Ville Principale</label>
+                            <select class="form-control">
+                                <option>Abidjan, Côte d'Ivoire</option>
+                                <option>Dakar, Sénégal</option>
+                                <option>Lomé, Togo</option>
+                                <option>Multi-pays</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-full">
+                            <label>Besoins Estimés & Cahier des Charges</label>
+                            <textarea class="form-control" style="min-height: 100px;" placeholder="Précisez le volume mensuel souhaité, besoin en chauffeurs habilités, exigences de blindage..."></textarea>
+                        </div>
+                        <div class="form-group form-full">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Transmettre la Demande à la Direction</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md); display: inline-block;">MOTION<span>DRIVE</span></a>
+                    <p style="color: var(--color-stone-light);">L'excellence du transport de prestige en Afrique francophone.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="flotte.html">Notre Flotte</a>
+                        <a href="services.html">Services Exécutifs</a>
+                        <a href="contact.html">Assistance Conciergerie</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Conciergerie 24/7</h4>
+                    <div style="font-size: var(--text-lg); font-weight: 700; color: white; margin: var(--space-xs) 0 var(--space-sm);">+225 07 00 00 00 00</div>
+                    <a href="https://wa.me/2250700000000" target="_blank" class="btn btn-copper" style="min-height: 44px;">WhatsApp Direct</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Motion Drive Africa. Tous droits réservés.</div>
+                <div>Designed for flagship agency presentation.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+</body>
+</html>
