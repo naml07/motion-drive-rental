@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal de la Mobilité Exécutive — Motion Drive</title>
+    <meta name="description" content="Analyses et chroniques sur l'évolution du transport d'affaires, les sommets diplomatiques en Afrique de l'Ouest et les escapades de prestige.">
+    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/blog.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar scrolled">
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">MOTION<span>DRIVE</span></a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="flotte.html" class="nav-link">Notre Flotte</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="corporate.html" class="nav-link">Entreprises & ONG</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="blog.html" class="nav-link active">Journal</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; gap: 12px; align-items: center;">
+                <a href="contact.html" class="btn btn-copper" style="display: none; @media(min-width:768px){display:inline-flex;}">Assistance VIP</a>
+                <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <a href="flotte.html" class="mobile-nav-link">Notre Flotte</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="corporate.html" class="mobile-nav-link">Entreprises & ONG</a>
+            <a href="about.html" class="mobile-nav-link">À Propos</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            <a href="blog.html" class="mobile-nav-link text-copper">Journal</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="blog-hero">
+        <div class="container reveal">
+            <span class="text-caption" style="color: var(--color-copper-light);">Chroniques & Perspectives</span>
+            <h1 class="text-display" style="color: white; margin-bottom: var(--space-sm);">Le Journal de la Mobilité</h1>
+            <p class="text-lead" style="color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 auto;">Explorations sur l'art du voyage d'affaires, la gestion de flottes institutionnelles et les trésors cachés de la côte ouest-africaine.</p>
+        </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <main class="container">
+        <div class="blog-grid">
+            
+            <article class="blog-card reveal">
+                <div class="blog-img">
+                    <img src="./assets/images/dest_abidjan.png" alt="Abidjan de nuit">
+                </div>
+                <div class="blog-content">
+                    <span class="text-caption">Économie & Sommets</span>
+                    <h3 style="margin: var(--space-xs) 0;">Comment Abidjan s'impose comme la capitale des grands sommets africains</h3>
+                    <p style="font-size: var(--text-sm); flex-grow: 1;">Analyse des exigences logistiques croissantes lors des forums internationaux et du rôle crucial des cortèges diplomatiques.</p>
+                    <a href="#" class="text-copper" style="font-weight: 700; font-size: var(--text-sm);">Lire l'article →</a>
+                </div>
+            </article>
+
+            <article class="blog-card reveal reveal-delay-1">
+                <div class="blog-img">
+                    <img src="./assets/images/fleet_suv.png" alt="SUV blindé">
+                </div>
+                <div class="blog-content">
+                    <span class="text-caption">Sécurité VIP</span>
+                    <h3 style="margin: var(--space-xs) 0;">Véhicules blindés en Afrique de l'Ouest : standard de luxe ou nécessité ?</h3>
+                    <p style="font-size: var(--text-sm); flex-grow: 1;">Plongée dans les spécifications techniques de nos SUV niveau B6 et les protocoles d'extraction de notre PC conciergerie.</p>
+                    <a href="#" class="text-copper" style="font-weight: 700; font-size: var(--text-sm);">Lire l'article →</a>
+                </div>
+            </article>
+
+            <article class="blog-card reveal reveal-delay-2">
+                <div class="blog-img">
+                    <img src="./assets/images/story_couple.png" alt="Escapade côtière">
+                </div>
+                <div class="blog-content">
+                    <span class="text-caption">Escapades de Prestige</span>
+                    <h3 style="margin: var(--space-xs) 0;">De Dakar à la Somone : itinéraire idéal pour un week-end exécutif</h3>
+                    <p style="font-size: var(--text-sm); flex-grow: 1;">Découvrez notre sélection de lodges confidentiels et de routes côtières à explorer au volant d'un Range Rover Sport.</p>
+                    <a href="#" class="text-copper" style="font-weight: 700; font-size: var(--text-sm);">Lire l'article →</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md); display: inline-block;">MOTION<span>DRIVE</span></a>
+                    <p style="color: var(--color-stone-light);">L'excellence du transport de prestige en Afrique francophone.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="flotte.html">Notre Flotte</a>
+                        <a href="services.html">Services Exécutifs</a>
+                        <a href="contact.html">Assistance Conciergerie</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Conciergerie 24/7</h4>
+                    <div style="font-size: var(--text-lg); font-weight: 700; color: white; margin: var(--space-xs) 0 var(--space-sm);">+225 07 00 00 00 00</div>
+                    <a href="https://wa.me/2250700000000" target="_blank" class="btn btn-copper" style="min-height: 44px;">WhatsApp Direct</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Motion Drive Africa. Tous droits réservés.</div>
+                <div>Designed for flagship agency presentation.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+</body>
+</html>
