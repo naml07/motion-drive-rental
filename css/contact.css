@@ -1,0 +1,54 @@
+/* ==========================================================================
+   CONTACT PAGE STYLES - VIP CONCIERGE & OFFICES
+   ========================================================================== */
+
+.contact-hero {
+    padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-2xl);
+    background-color: var(--color-graphite);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    padding: var(--space-3xl) 0;
+}
+
+@media (min-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1.2fr;
+    }
+}
+
+.contact-info-card {
+    background-color: var(--color-warm-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.office-item {
+    margin: var(--space-md) 0;
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.office-item:last-child {
+    border-bottom: none;
+}
+
+.map-simulator {
+    height: 100%;
+    min-height: 400px;
+    background-color: var(--color-graphite-mid);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-lg);
+}
