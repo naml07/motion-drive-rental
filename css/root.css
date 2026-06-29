@@ -1,0 +1,72 @@
+/* ==========================================================================
+   MOTION DRIVE - DESIGN TOKENS & CORE VARIABLES
+   Flagship Digital Experience for Premium Car Rental
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    /* Color Palette - Luxury African Realism */
+    --color-graphite: #141414;
+    --color-graphite-mid: #222222;
+    --color-graphite-light: #333333;
+    --color-stone: #6b6b6b;
+    --color-stone-light: #9e9e9e;
+    --color-warm-white: #faf8f5;
+    --color-cream: #f4f0ea;
+    --color-white: #ffffff;
+    
+    /* Copper Accents */
+    --color-copper: #b87333;
+    --color-copper-light: #d4955a;
+    --color-copper-dark: #8c5523;
+    --color-copper-pale: rgba(184, 115, 51, 0.08);
+
+    /* Typography */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Responsive Typography Scale - Mobile First Fluid Sizing */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+    --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 0.9375rem);
+    --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+    --text-3xl: clamp(2rem, 1.7rem + 1.5vw, 3rem);
+    --text-4xl: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
+    --text-display: clamp(3rem, 2.2rem + 4vw, 6.5rem);
+
+    /* Spacing Scale */
+    --space-2xs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+    --space-2xl: 6rem;
+    --space-3xl: 9rem;
+
+    /* Layout */
+    --container-max: 1400px;
+    --container-padding: clamp(1.25rem, 5vw, 4rem);
+    --header-height: 84px;
+
+    /* Shadows - Natural & Soft */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.12);
+    --shadow-copper: 0 12px 32px rgba(184, 115, 51, 0.2);
+
+    /* Borders & Radii */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --border-light: 1px solid rgba(0, 0, 0, 0.08);
+    --border-dark: 1px solid rgba(255, 255, 255, 0.12);
+
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 1s cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Drive — Location de Voitures de Prestige en Afrique de l'Ouest</title>
+    <meta name="description" content="Découvrez Motion Drive, la référence de la location automobile premium en Afrique (Abidjan, Lomé, Dakar). Flotte de luxe, chauffeur privé et service aux entreprises.">
+    <meta name="keywords" content="location voiture prestige abidjan, location suv luxe lomé, location voiture dakar, chauffeur privé afrique de l'ouest, motion drive">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://motiondrive-rental.com/">
+    <meta property="og:title" content="Motion Drive — L'Élégance du Mouvement">
+    <meta property="og:description" content="Expérience de location automobile sans compromis en Afrique de l'Ouest. Confort absolu, sécurité et prestige.">
+    <meta property="og:image" content="./assets/images/hero_background.png">
+
+    <!-- CSS Design System -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRental",
+      "name": "Motion Drive",
+      "description": "Location automobile premium et service de chauffeur privé en Afrique de l'Ouest.",
+      "url": "https://motiondrive-rental.com",
+      "logo": "https://motiondrive-rental.com/logo.png",
+      "telephone": "+2250700000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Boulevard de la République, Plateau",
+        "addressLocality": "Abidjan",
+        "addressCountry": "CI"
+      },
+      "priceRange": "$$$"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar" role="banner">
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo" aria-label="Motion Drive Accueil">
+                MOTION<span>DRIVE</span>
+            </a>
+            
+            <nav class="nav-links" role="navigation" aria-label="Navigation principale">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="flotte.html" class="nav-link">Notre Flotte</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="corporate.html" class="nav-link">Entreprises & ONG</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="blog.html" class="nav-link">Journal</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions" style="display: flex; gap: 12px; align-items: center;">
+                <a href="flotte.html" class="btn btn-copper" style="display: none; @media(min-width:768px){display:inline-flex;}">Réserver</a>
+                <button class="menu-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link text-copper">Accueil</a>
+            <a href="flotte.html" class="mobile-nav-link">Notre Flotte</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="corporate.html" class="mobile-nav-link">Entreprises & ONG</a>
+            <a href="about.html" class="mobile-nav-link">À Propos</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            <a href="blog.html" class="mobile-nav-link">Journal</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <div style="margin-top: 24px;">
+                <a href="flotte.html" class="btn btn-copper" style="width: 100%;">Réserver un Véhicule</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main role="main">
+
+        <!-- HERO SECTION -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-bg">
+                <img src="./assets/images/hero_background.png" alt="SUV de prestige roulant de nuit à Abidjan" fetchpriority="high">
+            </div>
+            <div class="hero-overlay"></div>
+            
+            <div class="container">
+                <div class="hero-content reveal">
+                    <span class="text-caption">L'excellence de la mobilité en Afrique</span>
+                    <h1 id="hero-heading" class="text-display hero-title">L'Élégance du Mouvement. Sans Compromis.</h1>
+                    <p class="hero-subtitle">Redéfinissez vos standards de voyage en Côte d'Ivoire, au Togo et au Sénégal. Presteza, confort absolu et discrétion professionnelle pour vos déplacements exigeants.</p>
+                    <div class="hero-actions">
+                        <a href="#search-section" class="btn btn-copper">Rechercher un véhicule</a>
+                        <a href="services.html" class="btn btn-outline-white">Découvrir nos services</a>
+                    </div>
+                </div>
+
+                <!-- INTEGRATED SEARCH ENGINE -->
+                <div id="search-section" class="search-module reveal reveal-delay-2" role="search">
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label for="pickup-loc">Départ</label>
+                            <select id="pickup-loc" class="form-control" aria-label="Ville de départ">
+                                <option value="Abidjan - Aéroport FHB">Abidjan — Aéroport FHB</option>
+                                <option value="Abidjan - Plateau / Cocody">Abidjan — Plateau / Cocody</option>
+                                <option value="Lomé - Aéroport Gnassingbé Eyadéma">Lomé — Aéroport G. Eyadéma</option>
+                                <option value="Dakar - Aéroport Blaise Diagne">Dakar — Aéroport Blaise Diagne</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="return-loc">Retour</label>
+                            <select id="return-loc" class="form-control" aria-label="Ville de retour">
+                                <option value="Identique">Identique au lieu de départ</option>
+                                <option value="Abidjan - Aéroport FHB">Abidjan — Aéroport FHB</option>
+                                <option value="Lomé - Centre Ville">Lomé — Centre Ville</option>
+                                <option value="Dakar - Almadies">Dakar — Almadies</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickup-date">Date de départ</label>
+                            <input type="date" id="pickup-date" class="form-control" aria-label="Date de prise en charge">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="return-date">Date de retour</label>
+                            <input type="date" id="return-date" class="form-control" aria-label="Date de restitution">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vehicle-category">Catégorie</label>
+                            <select id="vehicle-category" class="form-control" aria-label="Catégorie de véhicule">
+                                <option value="all">Toutes les catégories</option>
+                                <option value="suv">SUV de Prestige 4x4</option>
+                                <option value="sedan">Berlines Exécutives</option>
+                                <option value="van">Vans VIP & Cortèges</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="justify-content: flex-end;">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Trouver</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST INDICATORS -->
+        <section class="trust-bar" aria-label="Statistiques de confiance">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="reveal">
+                        <div class="trust-number" data-target="150" data-suffix="+">0<span>+</span></div>
+                        <div class="trust-label">Véhicules de Prestige Récents</div>
+                    </div>
+                    <div class="reveal reveal-delay-1">
+                        <div class="trust-number" data-target="98" data-suffix="%">0<span>%</span></div>
+                        <div class="trust-label">Satisfaction Clients Exécutifs</div>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <div class="trust-number" data-target="4" data-suffix="">0</div>
+                        <div class="trust-label">Capitales Ouest-Africaines</div>
+                    </div>
+                    <div class="reveal reveal-delay-3">
+                        <div class="trust-number" data-target="24" data-suffix="/7">0<span>/7</span></div>
+                        <div class="trust-label">Assistance Conciergerie VIP</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLEET PREVIEW -->
+        <section class="section-fleet" aria-labelledby="fleet-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="text-caption">La Collection de Prestige</span>
+                    <h2 id="fleet-heading">Une ingénierie de pointe adaptée à chaque ambition.</h2>
+                    <p class="text-lead">Chaque véhicule de notre flotte est minutieusement inspecté, préparé avec raffinement et équipé pour garantir une sécurité absolue sur toutes les infrastructures.</p>
+                </div>
+
+                <div class="fleet-grid">
+                    <!-- Card 1: SUV -->
+                    <article class="fleet-card reveal">
+                        <div class="fleet-img">
+                            <span class="badge" style="position: absolute; top: 16px; right: 16px; z-index: 2;">Populaire</span>
+                            <img src="./assets/images/fleet_suv.png" alt="SUV de Luxe Noir Graphite Studio">
+                        </div>
+                        <div class="fleet-details">
+                            <span class="text-caption">SUV de Prestige</span>
+                            <h3>Range Rover Sport / Mercedes GLE</h3>
+                            <p>La suprématie sur la route. Une prestance imposante combinée au confort d'un salon première classe, idéal pour les sommets d'affaires ou les séjours prolongés.</p>
+                            <div class="fleet-specs">
+                                <span>⚡ Automatique</span>
+                                <span>🛡️ Blindage optionnel</span>
+                                <span>❄️ Climatisation Quad-Zone</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                                <div>
+                                    <span style="font-size: var(--text-xs); color: var(--color-stone);">À partir de</span>
+                                    <div style="font-size: var(--text-xl); font-weight: 700; color: var(--color-graphite);">180 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                                </div>
+                                <a href="flotte.html?category=suv" class="btn btn-outline">Réserver</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Sedan -->
+                    <article class="fleet-card reveal reveal-delay-1">
+                        <div class="fleet-img">
+                            <img src="./assets/images/fleet_sedan.png" alt="Berline Exécutive Noire en ville au coucher de soleil">
+                        </div>
+                        <div class="fleet-details">
+                            <span class="text-caption">Berline Exécutive</span>
+                            <h3>Mercedes Classe E / BMW Série 5</h3>
+                            <p>L'alliance parfaite entre diplomatie, silence et technologie. Conçue pour les délégations officielles, les transferts aéroportuaires et les dirigeants exigeants.</p>
+                            <div class="fleet-specs">
+                                <span>⚡ Automatique</span>
+                                <span>👔 Chauffeur VIP inclus</span>
+                                <span>📶 Wi-Fi à bord</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                                <div>
+                                    <span style="font-size: var(--text-xs); color: var(--color-stone);">À partir de</span>
+                                    <div style="font-size: var(--text-xl); font-weight: 700; color: var(--color-graphite);">150 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                                </div>
+                                <a href="flotte.html?category=sedan" class="btn btn-outline">Réserver</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--space-2xl);" class="reveal">
+                    <a href="flotte.html" class="btn btn-primary">Explorer toute la flotte (12 modèles)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US (EDITORIAL LAYOUT) -->
+        <section class="section-editorial" aria-labelledby="why-heading">
+            <div class="container">
+                <div class="editorial-grid">
+                    <div class="editorial-text reveal">
+                        <span class="text-caption">Pourquoi Motion Drive</span>
+                        <h2 id="why-heading" class="editorial-title">Une culture de la perfection forgée pour l'Afrique.</h2>
+                        <p class="text-lead" style="color: rgba(255,255,255,0.8);">Nous comprenons les réalités et les exigences élevées du continent. Motion Drive ne se contente pas de vous louer une voiture ; nous orchestrons votre tranquillité d'esprit.</p>
+                        
+                        <div class="editorial-list">
+                            <div class="editorial-item">
+                                <span class="editorial-number">01</span>
+                                <div>
+                                    <h4 style="color: var(--color-white); margin-bottom: 4px;">Ponctualité Obsessionnelle</h4>
+                                    <p style="color: var(--color-stone-light);">Nos chauffeurs et véhicules sont en place 30 minutes avant chaque rendez-vous. Le temps de nos clients est notre ressource la plus sacrée.</p>
+                                </div>
+                            </div>
+                            <div class="editorial-item">
+                                <span class="editorial-number">02</span>
+                                <div>
+                                    <h4 style="color: var(--color-white); margin-bottom: 4px;">Chauffeurs d'Élite Formés</h4>
+                                    <p style="color: var(--color-stone-light);">Bilingues, formés à la conduite de sécurité et à la plus stricte confidentialité professionnelle pour accompagner diplomates et cadres.</p>
+                                </div>
+                            </div>
+                            <div class="editorial-item">
+                                <span class="editorial-number">03</span>
+                                <div>
+                                    <h4 style="color: var(--color-white); margin-bottom: 4px;">Assistance Mécanique Immédiate</h4>
+                                    <p style="color: var(--color-stone-light);">En cas de l'imprévu le plus mineur, un véhicule de remplacement de catégorie égale ou supérieure vous est livré en moins de 45 minutes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editorial-img reveal reveal-delay-2" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+                        <img src="./assets/images/story_couple.png" alt="Couple africain élégant souriant près d'un SUV de luxe face à l'océan">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESTINATIONS STORYTELLING -->
+        <section class="section-destinations" aria-labelledby="dest-heading">
+            <div class="container">
+                <div class="section-header reveal" style="text-align: center; margin: 0 auto var(--space-2xl);">
+                    <span class="text-caption">Présence Régionale</span>
+                    <h2 id="dest-heading">Des métropoles d'effervescence aux routes côtières.</h2>
+                    <p class="text-lead">Un standard de qualité unique et homogène, quelle que soit votre destination en Afrique de l'Ouest.</p>
+                </div>
+
+                <div class="dest-grid">
+                    <div class="dest-card reveal">
+                        <img src="./assets/images/dest_abidjan.png" alt="Skyline illuminée d'Abidjan Plateau au crépuscule">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-content">
+                            <span class="badge" style="background: rgba(255,255,255,0.2); color: white; margin-bottom: 8px;">Hub Principal</span>
+                            <h3 style="color: white;">Abidjan, Côte d'Ivoire</h3>
+                            <p style="color: rgba(255,255,255,0.8); font-size: var(--text-sm);">Du quartier d'affaires du Plateau aux résidences d'Assinie.</p>
+                        </div>
+                    </div>
+
+                    <div class="dest-card reveal reveal-delay-1" style="background-color: var(--color-graphite);">
+                        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, #2a1f1a 0%, #141414 100%); z-index:1;"></div>
+                        <div class="dest-content" style="z-index: 2;">
+                            <span class="badge" style="background: var(--color-copper); color: white; margin-bottom: 8px;">Expansion</span>
+                            <h3 style="color: white;">Dakar, Sénégal</h3>
+                            <p style="color: rgba(255,255,255,0.8); font-size: var(--text-sm);">L'élégance face à l'Atlantique, transferts express AIBD et centre-ville.</p>
+                        </div>
+                    </div>
+
+                    <div class="dest-card reveal reveal-delay-2" style="background-color: var(--color-graphite-mid);">
+                        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, #1f2421 0%, #141414 100%); z-index:1;"></div>
+                        <div class="dest-content" style="z-index: 2;">
+                            <span class="badge" style="background: rgba(255,255,255,0.2); color: white; margin-bottom: 8px;">Service Premium</span>
+                            <h3 style="color: white;">Lomé, Togo</h3>
+                            <p style="color: rgba(255,255,255,0.8); font-size: var(--text-sm);">Sérénité sur le boulevard circulaire et missions diplomatiques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section-testimonials" aria-labelledby="testi-heading">
+            <div class="container">
+                <div class="testi-card reveal">
+                    <div class="testi-img">
+                        <img src="./assets/images/testimonial_user1.png" alt="Portrait de Marc Touré, dirigeant d'entreprise">
+                    </div>
+                    <div>
+                        <div class="quote-icon">“</div>
+                        <h3 style="margin-bottom: var(--space-md); font-weight: 600; line-height: 1.4;">Pour nos délégations d'investisseurs à Abidjan, nous n'avons pas le droit à l'erreur. Motion Drive est le seul partenaire qui offre un niveau de ponctualité et de prestige comparable aux standards suisses ou dubaïotes.</h3>
+                        <div>
+                            <div style="font-weight: 700; color: var(--color-graphite); font-size: var(--text-lg);">Marc Touré</div>
+                            <div style="color: var(--color-copper); font-size: var(--text-sm); font-weight: 500;">Directeur Associé, Pan-African Investment Partners</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ ACCORDION -->
+        <section style="padding: var(--space-3xl) 0; background-color: var(--color-warm-white);" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="section-header reveal" style="text-align: center; margin: 0 auto var(--space-2xl);">
+                    <span class="text-caption">Questions Fréquentes</span>
+                    <h2 id="faq-heading">Tout ce que vous devez savoir pour voyager sereinement.</h2>
+                </div>
+
+                <div class="accordion reveal">
+                    <div class="accordion-item active">
+                        <button class="accordion-header" aria-expanded="true">
+                            Quels sont les documents requis pour louer un véhicule premium ?
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-body" style="max-height: 200px;">
+                            <p>Nous demandons un permis de conduire valide depuis au moins 3 ans (national ou international), une pièce d'identité officielle (passeport ou CNI) et une carte de crédit pour l'empreinte de garantie. Pour les entreprises accréditées, un bon de commande validé suffit.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            La location inclut-elle systématiquement un chauffeur ?
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p>Nos berlines exécutives et vans VIP sont prioritairement proposés avec nos chauffeurs professionnels d'élite pour vous garantir confort et sécurité. Cependant, nos SUV peuvent être loués sans chauffeur après validation de notre service sécurité.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            Quelle est la politique de carburant et de kilométrage ?
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p>Nos véhicules sont livrés avec le plein de carburant et doivent être restitués avec le même niveau. Nos forfaits journaliers incluent un kilométrage généreux de 200 km/jour, parfaitement adapté aux déplacements urbains et périurbains.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FULLSCREEN CTA -->
+        <section class="section-cta" aria-labelledby="cta-heading">
+            <div class="container reveal">
+                <span class="text-caption" style="color: var(--color-copper-light);">Votre Prochain Voyage Commence Ici</span>
+                <h2 id="cta-heading" class="text-display" style="color: white; max-width: 800px; margin: 0 auto var(--space-md);">Prêt à rehausser le standard de vos déplacements ?</h2>
+                <p class="text-lead" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--space-lg);">Contactez notre conciergerie disponible 24h/24 ou réservez directement en ligne en moins de 2 minutes.</p>
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+                    <a href="flotte.html" class="btn btn-copper">Réserver en ligne</a>
+                    <a href="contact.html" class="btn btn-outline-white">Contacter par WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md); display: inline-block;">MOTION<span>DRIVE</span></a>
+                    <p style="color: var(--color-stone-light); max-width: 320px;">La première agence de location automobile de prestige d'Afrique de l'Ouest, conçue pour les esprits exigeants et les leaders en mouvement.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="flotte.html">Notre Flotte</a>
+                        <a href="services.html">Services Exécutifs</a>
+                        <a href="corporate.html">Offres Entreprises</a>
+                        <a href="about.html">À Propos</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <div class="footer-links">
+                        <a href="faq.html">Foire Aux Questions</a>
+                        <a href="blog.html">Journal de la Mobilité</a>
+                        <a href="contact.html">Assistance VIP</a>
+                        <a href="#">Conditions Générales</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Conciergerie 24/7</h4>
+                    <p style="color: var(--color-stone-light); margin-bottom: var(--space-xs);">Abidjan, Côte d'Ivoire</p>
+                    <div style="font-size: var(--text-lg); font-weight: 700; color: white; margin-bottom: var(--space-sm);">+225 07 00 00 00 00</div>
+                    <a href="https://wa.me/2250700000000" target="_blank" rel="noopener noreferrer" class="btn btn-copper" style="min-height: 44px; font-size: var(--text-xs);">Discussion WhatsApp Directe</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Motion Drive Africa. Tous droits réservés. Designed for flagship excellence.</div>
+                <div style="display: flex; gap: var(--space-md);">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Plan du Site</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOOKING CTA -->
+    <div class="sticky-mobile-cta" aria-label="Réservation rapide mobile">
+        <div>
+            <div style="font-size: var(--text-xs); color: var(--color-stone-light); text-transform: uppercase;">Location Premium</div>
+            <div style="font-size: var(--text-sm); font-weight: 700; color: white;">À partir de 150 000 FCFA/j</div>
+        </div>
+        <a href="flotte.html" class="btn btn-copper" style="min-height: 44px; padding: 0 20px;">Réserver</a>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/faq.js"></script>
+</body>
+</html>
