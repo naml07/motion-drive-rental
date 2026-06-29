@@ -155,13 +155,58 @@
     margin: 0 auto;
 }
 
+/* SEARCH & FILTER AREA */
+.search-filter-container {
+    margin-bottom: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-stone);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+
+#vehicle-search {
+    width: 100%;
+    padding: 14px 18px 14px 50px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    color: var(--color-graphite);
+}
+
+#vehicle-search:focus {
+    outline: none;
+    border-color: var(--color-copper);
+    box-shadow: 0 4px 20px rgba(184, 115, 51, 0.15);
+}
+
 /* FILTER BAR */
 .filter-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-bottom: var(--space-2xl);
+    margin-bottom: 0;
 }
 
 .filter-btn {
