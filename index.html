@@ -94,70 +94,127 @@
     <main role="main">
 
         <!-- HERO SECTION -->
-        <section class="hero" aria-labelledby="hero-heading">
+        <section class="hero hero-centered" aria-labelledby="hero-heading">
             <div class="hero-bg">
                 <img src="./assets/images/hero_background.png" alt="SUV de prestige roulant de nuit à Abidjan" fetchpriority="high">
             </div>
             <div class="hero-overlay"></div>
             
             <div class="container">
-                <div class="hero-content reveal">
-                    <span class="text-caption">L'excellence de la mobilité en Afrique</span>
-                    <h1 id="hero-heading" class="text-display hero-title">L'Élégance du Mouvement. Sans Compromis.</h1>
-                    <p class="hero-subtitle">Redéfinissez vos standards de voyage en Côte d'Ivoire, au Togo et au Sénégal. Presteza, confort absolu et discrétion professionnelle pour vos déplacements exigeants.</p>
-                    <div class="hero-actions">
-                        <a href="#search-section" class="btn btn-copper">Rechercher un véhicule</a>
-                        <a href="services.html" class="btn btn-outline-white">Découvrir nos services</a>
-                    </div>
+                <div class="hero-content-centered reveal">
+                    <span class="text-caption">L'excellence de la mobilité en Afrique de l'Ouest</span>
+                    <h1 id="hero-heading" class="text-display hero-title-centered">Location de <span class="text-copper">Voitures</span> en Côte d'Ivoire</h1>
+                    <p class="hero-subtitle-centered">Redéfinissez vos standards de déplacement à Abidjan, Dakar et Lomé. Presteza, confort absolu et discrétion professionnelle pour vos déplacements exigés.</p>
                 </div>
 
-                <!-- INTEGRATED SEARCH ENGINE -->
-                <div id="search-section" class="search-module reveal reveal-delay-2" role="search">
-                    <form class="search-form">
-                        <div class="form-group">
-                            <label for="pickup-loc">Départ</label>
-                            <select id="pickup-loc" class="form-control" aria-label="Ville de départ">
-                                <option value="Abidjan - Aéroport FHB">Abidjan — Aéroport FHB</option>
-                                <option value="Abidjan - Plateau / Cocody">Abidjan — Plateau / Cocody</option>
-                                <option value="Lomé - Aéroport Gnassingbé Eyadéma">Lomé — Aéroport G. Eyadéma</option>
-                                <option value="Dakar - Aéroport Blaise Diagne">Dakar — Aéroport Blaise Diagne</option>
+                <!-- TABS ABOVE SEARCH BAR -->
+                <div class="hero-filter-tabs reveal reveal-delay-1">
+                    <button class="hero-filter-tab active">Tout</button>
+                    <button class="hero-filter-tab">Flotte Récente (-2ans)</button>
+                    <button class="hero-filter-tab">Éditions Blindées VIP</button>
+                </div>
+
+                <!-- INTEGRATED PILL SEARCH ENGINE -->
+                <div id="search-section" class="search-module-pill reveal reveal-delay-2" role="search">
+                    <form class="search-form-pill" action="flotte.html" method="GET">
+                        <div class="pill-group">
+                            <label for="pickup-loc">La Marque / Ville</label>
+                            <select id="pickup-loc" name="location" class="pill-control" aria-label="Ville ou Marque">
+                                <option value="all">Toutes les marques & villes</option>
+                                <option value="abidjan">Abidjan — Côte d'Ivoire</option>
+                                <option value="dakar">Dakar — Sénégal</option>
+                                <option value="lome">Lomé — Togo</option>
+                                <option value="rangerover">Range Rover / Land Rover</option>
+                                <option value="mercedes">Mercedes-Benz</option>
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label for="return-loc">Retour</label>
-                            <select id="return-loc" class="form-control" aria-label="Ville de retour">
-                                <option value="Identique">Identique au lieu de départ</option>
-                                <option value="Abidjan - Aéroport FHB">Abidjan — Aéroport FHB</option>
-                                <option value="Lomé - Centre Ville">Lomé — Centre Ville</option>
-                                <option value="Dakar - Almadies">Dakar — Almadies</option>
+                        <div class="pill-divider"></div>
+
+                        <div class="pill-group">
+                            <label for="vehicle-model">Modèle / Catégorie</label>
+                            <select id="vehicle-model" name="category" class="pill-control" aria-label="Modèle">
+                                <option value="all">Tous les modèles</option>
+                                <option value="sedan">Berline Exécutive</option>
+                                <option value="suv">SUV 4x4 Prestige</option>
+                                <option value="luxe">Limousine & Luxe</option>
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label for="pickup-date">Date de départ</label>
-                            <input type="date" id="pickup-date" class="form-control" aria-label="Date de prise en charge">
-                        </div>
+                        <div class="pill-divider"></div>
 
-                        <div class="form-group">
-                            <label for="return-date">Date de retour</label>
-                            <input type="date" id="return-date" class="form-control" aria-label="Date de restitution">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="vehicle-category">Catégorie</label>
-                            <select id="vehicle-category" class="form-control" aria-label="Catégorie de véhicule">
-                                <option value="all">Toutes les catégories</option>
-                                <option value="suv">SUV de Prestige 4x4</option>
-                                <option value="sedan">Berlines Exécutives</option>
-                                <option value="van">Vans VIP & Cortèges</option>
+                        <div class="pill-group">
+                            <label for="daily-price">Prix Journalier</label>
+                            <select id="daily-price" name="price" class="pill-control" aria-label="Prix Journalier">
+                                <option value="all">Tous les tarifs</option>
+                                <option value="150">150 000 - 250 000 FCFA/j</option>
+                                <option value="250">250 000 - 450 000 FCFA/j</option>
+                                <option value="vip">450 000+ FCFA/j (Blindé/VIP)</option>
                             </select>
                         </div>
 
-                        <div class="form-group" style="justify-content: flex-end;">
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Trouver</button>
+                        <div class="pill-action">
+                            <button type="submit" class="btn-pill-search" aria-label="Lancer la recherche">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
                         </div>
                     </form>
+                </div>
+
+                <!-- CIRCULAR VEHICLE CATEGORY ICONS BELOW SEARCH BAR -->
+                <div class="hero-categories reveal reveal-delay-3">
+                    <a href="flotte.html?category=sedan" class="category-icon-item">
+                        <div class="category-icon-circle">
+                            <!-- Sedan Silhouette SVG -->
+                            <svg viewBox="0 0 64 32" fill="currentColor">
+                                <path d="M58 16H52L46 6H18L12 16H6C3.8 16 2 17.8 2 20V24H6C6 26.2 7.8 28 10 28C12.2 28 14 26.2 14 24H50C50 26.2 51.8 28 54 28C56.2 28 58 26.2 58 24H62V20C62 17.8 60.2 16 58 16ZM19.5 9H31V16H14.5L19.5 9ZM34 9H44.5L49.5 16H34V9ZM10 24C8.9 24 8 23.1 8 22C8 20.9 8.9 20 10 20C11.1 20 12 20.9 12 22C12 23.1 11.1 24 10 24ZM54 24C52.9 24 52 23.1 52 22C52 20.9 52.9 20 54 20C55.1 20 56 20.9 56 22C56 23.1 55.1 24 54 24Z"/>
+                            </svg>
+                        </div>
+                        <span>Sedan</span>
+                    </a>
+
+                    <a href="flotte.html?category=sedan" class="category-icon-item">
+                        <div class="category-icon-circle">
+                            <!-- Berline Silhouette SVG -->
+                            <svg viewBox="0 0 64 32" fill="currentColor">
+                                <path d="M60 15H54L47 7H17L10 15H4C2.3 15 1 16.3 1 18V23H5C5 25.8 7.2 28 10 28C12.8 28 15 25.8 15 23H49C49 25.8 51.2 28 54 28C56.8 28 59 25.8 59 23H63V18C63 16.3 61.7 15 60 15ZM19 10H31V15H13L19 10ZM34 10H45L51 15H34V10ZM10 24C8.9 24 8 23.1 8 22C8 20.9 8.9 20 10 20C11.1 20 12 20.9 12 22C12 23.1 11.1 24 10 24ZM54 24C52.9 24 52 23.1 52 22C52 20.9 52.9 20 54 20C55.1 20 56 20.9 56 22C56 23.1 55.1 24 54 24Z"/>
+                            </svg>
+                        </div>
+                        <span>Berline</span>
+                    </a>
+
+                    <a href="flotte.html?category=suv" class="category-icon-item">
+                        <div class="category-icon-circle">
+                            <!-- 4x4 Silhouette SVG -->
+                            <svg viewBox="0 0 64 32" fill="currentColor">
+                                <path d="M58 13H48L42 4H14L8 13H4C2.3 13 1 14.3 1 16V24H6C6 26.8 8.2 29 11 29C13.8 29 16 26.8 16 24H48C48 26.8 50.2 29 53 29C55.8 29 58 26.8 58 24H63V18C63 15.2 60.8 13 58 13ZM16 7H31V13H10L16 7ZM34 7H40L46 13H34V7ZM11 25C9.9 25 9 24.1 9 23C9 21.9 9.9 21 11 21C12.1 21 13 21.9 13 23C13 24.1 12.1 25 11 25ZM53 25C51.9 25 51 24.1 51 23C51 21.9 51.9 21 53 21C54.1 21 55 21.9 55 23C55 24.1 54.1 25 53 25Z"/>
+                            </svg>
+                        </div>
+                        <span>4x4</span>
+                    </a>
+
+                    <a href="flotte.html?category=suv" class="category-icon-item">
+                        <div class="category-icon-circle">
+                            <!-- SUV Silhouette SVG -->
+                            <svg viewBox="0 0 64 32" fill="currentColor">
+                                <path d="M59 14H49L41 5H13L7 14H3C1.9 14 1 14.9 1 16V23H6C6 25.8 8.2 28 11 28C13.8 28 16 25.8 16 23H48C48 25.8 50.2 28 53 28C55.8 28 58 25.8 58 23H63V18C63 15.8 61.2 14 59 14ZM15 8H31V14H10L15 8ZM34 8H39L45 14H34V8ZM11 24C9.9 24 9 23.1 9 22C9 20.9 9.9 20 11 20C12.1 20 13 20.9 13 22C13 23.1 12.1 24 11 24ZM53 24C51.9 24 51 23.1 51 22C51 20.9 51.9 20 53 20C54.1 20 55 20.9 55 22C55 23.1 54.1 24 53 24Z"/>
+                            </svg>
+                        </div>
+                        <span>SUV</span>
+                    </a>
+
+                    <a href="flotte.html?category=luxe" class="category-icon-item">
+                        <div class="category-icon-circle">
+                            <!-- Luxe Silhouette SVG -->
+                            <svg viewBox="0 0 64 32" fill="currentColor">
+                                <path d="M61 16H53L45 8H16L9 16H3C1.9 16 1 16.9 1 18V23H6C6 25.8 8.2 28 11 28C13.8 28 16 25.8 16 23H48C48 25.8 50.2 28 53 28C55.8 28 58 25.8 58 23H63V18C63 16.9 62.1 16 61 16ZM18 11H31V16H12L18 11ZM34 11H43L48 16H34V11ZM11 24C9.9 24 9 23.1 9 22C9 20.9 9.9 20 11 20C12.1 20 13 20.9 13 22C13 23.1 12.1 24 11 24ZM53 24C51.9 24 51 23.1 51 22C51 20.9 51.9 20 53 20C54.1 20 55 20.9 55 22C55 23.1 54.1 24 53 24Z"/>
+                            </svg>
+                        </div>
+                        <span>Luxe</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -460,6 +517,16 @@
             <div style="font-size: var(--text-sm); font-weight: 700; color: white;">À partir de 150 000 FCFA/j</div>
         </div>
         <a href="flotte.html" class="btn btn-copper" style="min-height: 44px; padding: 0 20px;">Réserver</a>
+    </div>
+
+    <!-- FLOATING WHATSAPP ASSISTANCE WIDGET -->
+    <div class="floating-help-widget">
+        <div class="floating-help-text">Need Help / Besoin d'aide ?</div>
+        <a href="https://wa.me/2250700000000" target="_blank" class="floating-whatsapp-btn" aria-label="Assistance WhatsApp 24/7">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.289.058.39-.058c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.392-10.416c-4.418 0-8 3.582-8 8 0 1.411.368 2.738 1.025 3.896l-1.09 3.989 4.091-1.071c1.118.614 2.399.963 3.766.963 4.417 0 8-3.582 8-8s-3.583-8-8-8z"/>
+            </svg>
+        </a>
     </div>
 
     <script src="./js/main.js"></script>
