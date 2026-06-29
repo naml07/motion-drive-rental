@@ -79,10 +79,11 @@
                 </div>
 
                 <div class="filter-group">
-                    <button class="filter-btn active" data-filter="all">Toute la collection (6)</button>
-                    <button class="filter-btn" data-filter="suv">SUV 4x4 de Prestige (3)</button>
-                    <button class="filter-btn" data-filter="sedan">Berlines Exécutives (2)</button>
-                    <button class="filter-btn" data-filter="van">Vans & Cortèges (1)</button>
+                    <button class="filter-btn active" data-filter="all">Toute la collection (16)</button>
+                    <button class="filter-btn" data-filter="suv">SUV 4x4 de Prestige (6)</button>
+                    <button class="filter-btn" data-filter="sedan">Berlines Exécutives (5)</button>
+                    <button class="filter-btn" data-filter="luxe">Limousines & Maybach (3)</button>
+                    <button class="filter-btn" data-filter="van">Vans & Cortèges VIP (2)</button>
                 </div>
                 
                 <div class="filter-group">
@@ -101,7 +102,7 @@
             <div class="magazine-grid">
                 
                 <!-- Vehicle 1 -->
-                <article class="mag-card reveal" data-category="suv" data-transmission="auto">
+                <article class="mag-card reveal clickable-card" data-category="suv" data-transmission="auto" data-name="Range Rover Sport Autobiography" data-price="250 000 FCFA">
                     <div class="mag-img">
                         <span class="badge" style="position: absolute; top: 16px; right: 16px; z-index: 2;">Disponibilité Immédiate</span>
                         <img src="./assets/images/fleet_suv.png" alt="Range Rover Sport Autobiography">
@@ -109,31 +110,29 @@
                     <div class="mag-content">
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
                             <span class="text-caption">SUV 4x4 Luxe</span>
-                            <label class="compare-toggle">
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
                                 <input type="checkbox" class="compare-checkbox" data-name="Range Rover Sport" data-price="250 000" data-motor="V6 3.0L Twin-Turbo" data-places="5"> Comparer
                             </label>
                         </div>
                         <h3>Range Rover Sport Autobiography</h3>
                         <p>L'icône absolue du statut et de l'aisance tout-terrain. Intérieur en cuir Windsor semi-aniline, système audio Meridian Surround et suspension pneumatique active.</p>
-                        
                         <div class="mag-specs-grid">
                             <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">3.0L V6 400ch</span></div>
                             <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">Auto 8 Rapports</span></div>
                             <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">5 Places VIP</span></div>
                         </div>
-
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
                             <div>
                                 <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
                                 <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">250 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
                             </div>
-                            <a href="contact.html?vehicle=Range%20Rover%20Sport" class="btn btn-primary">Réserver</a>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Range Rover Sport Autobiography" data-price="250 000 FCFA">Réserver</button>
                         </div>
                     </div>
                 </article>
 
                 <!-- Vehicle 2 -->
-                <article class="mag-card reveal reveal-delay-1" data-category="sedan" data-transmission="auto">
+                <article class="mag-card reveal reveal-delay-1 clickable-card" data-category="sedan" data-transmission="auto" data-name="Mercedes-Benz Classe E Exécutive" data-price="180 000 FCFA">
                     <div class="mag-img">
                         <span class="badge" style="position: absolute; top: 16px; right: 16px; z-index: 2; background: var(--color-graphite); color: white;">Chauffeur Recommandé</span>
                         <img src="./assets/images/fleet_sedan.png" alt="Mercedes-Benz Classe E 300">
@@ -141,87 +140,433 @@
                     <div class="mag-content">
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
                             <span class="text-caption">Berline Diplomatique</span>
-                            <label class="compare-toggle">
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
                                 <input type="checkbox" class="compare-checkbox" data-name="Mercedes Classe E" data-price="180 000" data-motor="2.0L Turbo Hybride" data-places="4"> Comparer
                             </label>
                         </div>
                         <h3>Mercedes-Benz Classe E Exécutive</h3>
                         <p>Le standard international des délégations et sommets d'affaires. Isolation phonique maximale, vitres arrière teintées et espace de travail ergonomique.</p>
-                        
                         <div class="mag-specs-grid">
                             <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">258ch Hybride</span></div>
                             <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">9G-Tronic Auto</span></div>
                             <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places Confort</span></div>
                         </div>
-
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
                             <div>
                                 <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
                                 <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">180 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
                             </div>
-                            <a href="contact.html?vehicle=Mercedes%20Classe%20E" class="btn btn-primary">Réserver</a>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Mercedes-Benz Classe E Exécutive" data-price="180 000 FCFA">Réserver</button>
                         </div>
                     </div>
                 </article>
 
                 <!-- Vehicle 3 -->
-                <article class="mag-card reveal" data-category="suv" data-transmission="auto">
+                <article class="mag-card reveal clickable-card" data-category="suv" data-transmission="auto" data-name="Mercedes-Benz GLE 450 4MATIC" data-price="220 000 FCFA">
                     <div class="mag-img">
                         <img src="./assets/images/fleet_suv.png" alt="Mercedes-Benz GLE 450 4MATIC" style="filter: hue-rotate(15deg);">
                     </div>
                     <div class="mag-content">
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
                             <span class="text-caption">SUV Tech Luxury</span>
-                            <label class="compare-toggle">
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
                                 <input type="checkbox" class="compare-checkbox" data-name="Mercedes GLE 450" data-price="220 000" data-motor="3.0L EQ Boost V6" data-places="7"> Comparer
                             </label>
                         </div>
                         <h3>Mercedes-Benz GLE 450 4MATIC</h3>
                         <p>Une intelligence embarquée impressionnante avec l'interface MBUX panoramique. Modularité 7 places et transmission intégrale permanente pour les terrains exigeants.</p>
-                        
                         <div class="mag-specs-grid">
                             <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">367ch EQ Boost</span></div>
                             <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">4MATIC Intégrale</span></div>
                             <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">7 Places Modulables</span></div>
                         </div>
-
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
                             <div>
                                 <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
                                 <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">220 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
                             </div>
-                            <a href="contact.html?vehicle=Mercedes%20GLE%20450" class="btn btn-primary">Réserver</a>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Mercedes-Benz GLE 450 4MATIC" data-price="220 000 FCFA">Réserver</button>
                         </div>
                     </div>
                 </article>
 
                 <!-- Vehicle 4 -->
-                <article class="mag-card reveal reveal-delay-1" data-category="sedan" data-transmission="auto">
+                <article class="mag-card reveal reveal-delay-1 clickable-card" data-category="sedan" data-transmission="auto" data-name="BMW Série 5 Pack M Exécutive" data-price="170 000 FCFA">
                     <div class="mag-img">
                         <img src="./assets/images/fleet_sedan.png" alt="BMW Série 5 Pack M" style="filter: contrast(1.1);">
                     </div>
                     <div class="mag-content">
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
                             <span class="text-caption">Berline Sportive Exécutive</span>
-                            <label class="compare-toggle">
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
                                 <input type="checkbox" class="compare-checkbox" data-name="BMW Série 5" data-price="170 000" data-motor="2.0L TwinPower Turbo" data-places="4"> Comparer
                             </label>
                         </div>
                         <h3>BMW Série 5 Pack M Exécutive</h3>
                         <p>Le plaisir de conduite dynamique marié à une prestance institutionnelle incomparable. Châssis adaptatif, affichage tête haute et cuir Dakota.</p>
-                        
                         <div class="mag-specs-grid">
                             <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">252ch TwinPower</span></div>
                             <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">Steptronic Sport</span></div>
                             <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places Confort</span></div>
                         </div>
-
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
                             <div>
                                 <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
                                 <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">170 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
                             </div>
-                            <a href="contact.html?vehicle=BMW%20Serie%205" class="btn btn-primary">Réserver</a>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="BMW Série 5 Pack M Exécutive" data-price="170 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 5 -->
+                <article class="mag-card reveal clickable-card" data-category="luxe" data-transmission="auto" data-name="Mercedes-Maybach S680 Limousine" data-price="550 000 FCFA">
+                    <div class="mag-img">
+                        <span class="badge" style="position: absolute; top: 16px; right: 16px; z-index: 2; background: var(--color-copper); color: white;">Prestige Suprême</span>
+                        <img src="./assets/images/fleet_maybach.png" alt="Mercedes-Maybach S680">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Limousine V12 Blindée</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Maybach S680" data-price="550 000" data-motor="6.0L V12 Biturbo" data-places="4"> Comparer
+                            </label>
+                        </div>
+                        <h3>Mercedes-Maybach S680 Limousine</h3>
+                        <p>Le summum du luxe automobile mondial. Fauteuils Executive inclinables avec massage First-Class, flûtes à champagne argentées et isolation acoustique absolue.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">6.0L V12 612ch</span></div>
+                            <div class="spec-item"><span class="spec-label">Blindage</span><span class="spec-value">Option B6/VR7</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places VIP</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Diplomatique</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">550 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Mercedes-Maybach S680 Limousine" data-price="550 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 6 -->
+                <article class="mag-card reveal reveal-delay-1 clickable-card" data-category="suv" data-transmission="auto" data-name="Mercedes-Benz G63 AMG V8 Bi-Turbo" data-price="450 000 FCFA">
+                    <div class="mag-img">
+                        <span class="badge" style="position: absolute; top: 16px; right: 16px; z-index: 2; background: #111; color: white;">Performance AMG</span>
+                        <img src="./assets/images/fleet_gwagon.png" alt="Mercedes G63 AMG">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">4x4 de Prestige V8</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="G63 AMG" data-price="450 000" data-motor="4.0L V8 Biturbo" data-places="5"> Comparer
+                            </label>
+                        </div>
+                        <h3>Mercedes-Benz G63 AMG V8 Bi-Turbo</h3>
+                        <p>Une présence visuelle et sonore inimitable. Le G-Wagon conjugue brutalité mécanique et raffinement artisanal dans un habitable en cuir Nappa exclusif.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">4.0L V8 585ch</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">AMG SPEEDSHIFT 9G</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">5 Places Prestige</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">450 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Mercedes-Benz G63 AMG V8 Bi-Turbo" data-price="450 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 7 -->
+                <article class="mag-card reveal clickable-card" data-category="suv" data-transmission="auto" data-name="Cadillac Escalade ESV Platinum" data-price="380 000 FCFA">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_gwagon.png" alt="Cadillac Escalade ESV" style="filter: hue-rotate(200deg);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">SUV Cortège VIP</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Escalade ESV" data-price="380 000" data-motor="6.2L V8 EcoTec3" data-places="7"> Comparer
+                            </label>
+                        </div>
+                        <h3>Cadillac Escalade ESV Platinum</h3>
+                        <p>Le géant américain des cortèges présidentiels et stars internationales. Écran incurvé OLED 38 pouces, système audio AKG 36 haut-parleurs et espace royal.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">6.2L V8 426ch</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">Auto 10 Rapports</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">7 Places Cortège</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Cortège</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">380 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Cadillac Escalade ESV Platinum" data-price="380 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 8 -->
+                <article class="mag-card reveal reveal-delay-1 clickable-card" data-category="luxe" data-transmission="auto" data-name="Mercedes-Benz Classe S 500 4MATIC" data-price="350 000 FCFA">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_maybach.png" alt="Mercedes Classe S 500" style="filter: brightness(1.15);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Salon Présidentiel</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Classe S 500" data-price="350 000" data-motor="3.0L EQ Boost 6-cyl" data-places="4"> Comparer
+                            </label>
+                        </div>
+                        <h3>Mercedes-Benz Classe S 500 4MATIC</h3>
+                        <p>La référence incontestée des berlines de luxe. Assistant vocal intuitif, suspension E-ACTIVE BODY CONTROL filtrant chaque imperfection de la chaussée.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">435ch + EQ Boost</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">9G-Tronic 4MATIC</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places First Class</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">350 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Mercedes-Benz Classe S 500 4MATIC" data-price="350 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 9 -->
+                <article class="mag-card reveal clickable-card" data-category="suv" data-transmission="auto" data-name="Lexus LX 600 VIP Executive" data-price="320 000 FCFA">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_suv.png" alt="Lexus LX 600 VIP" style="filter: hue-rotate(320deg);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Fiabilité Suprême</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Lexus LX 600" data-price="320 000" data-motor="3.5L V6 Twin-Turbo" data-places="4"> Comparer
+                            </label>
+                        </div>
+                        <h3>Lexus LX 600 VIP Executive</h3>
+                        <p>La légendaire robustesse japonaise habillée du luxe le plus raffiné. Fauteuils arrière indépendants avec inclinaison à 48 degrés et repose-pieds déployables.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">3.5L V6 415ch</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">Direct-Shift 10</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places VIP</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">320 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Lexus LX 600 VIP Executive" data-price="320 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 10 -->
+                <article class="mag-card reveal reveal-delay-1 clickable-card" data-category="luxe" data-transmission="auto" data-name="Audi A8 L Horch Limousine" data-price="360 000 FCFA">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_sedan.png" alt="Audi A8 L Horch" style="filter: hue-rotate(40deg);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Limousine Longue</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Audi A8 L Horch" data-price="360 000" data-motor="4.0L V8 Biturbo MHEV" data-places="4"> Comparer
+                            </label>
+                        </div>
+                        <h3>Audi A8 L Horch Limousine</h3>
+                        <p>L'expression statutaire ultime de la marque aux quatre anneaux. Empattement rallongé, cuir Valcona capitonné et phares Digital Matrix LED haute précision.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">4.0L V8 460ch</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">tiptronic 8 rapports</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places Prestige</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">360 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Audi A8 L Horch Limousine" data-price="360 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 11 -->
+                <article class="mag-card reveal clickable-card" data-category="van" data-transmission="auto" data-name="Mercedes-Benz Classe V 300d Exclusive" data-price="240 000 FCFA">
+                    <div class="mag-img">
+                        <span class="badge" style="position: absolute; top: 16px; right: 16px; z-index: 2; background: var(--color-graphite); color: white;">Salon Mobile</span>
+                        <img src="./assets/images/fleet_suv.png" alt="Mercedes Classe V 300d" style="filter: grayscale(0.5) contrast(1.2);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Van VIP 7 Places</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Classe V 300d" data-price="240 000" data-motor="2.0L Diesel Bi-Turbo" data-places="7"> Comparer
+                            </label>
+                        </div>
+                        <h3>Mercedes-Benz Classe V 300d Exclusive</h3>
+                        <p>Le salon d'affaires mobile idéal pour les délégations ministérielles ou états-majors d'entreprises. Sièges individuels en cuir face-à-face et table rabattable.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">239ch Bi-Turbo</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">9G-Tronic Auto</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">7 Places Salon VIP</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Délégation</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">240 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Mercedes-Benz Classe V 300d Exclusive" data-price="240 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 12 -->
+                <article class="mag-card reveal reveal-delay-1 clickable-card" data-category="suv" data-transmission="auto" data-name="Porsche Cayenne Coupé Turbo GT" data-price="310 000 FCFA">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_suv.png" alt="Porsche Cayenne Coupé" style="filter: hue-rotate(90deg);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">SUV Sportif de Prestige</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Cayenne Coupé" data-price="310 000" data-motor="4.0L V8 Biturbo" data-places="5"> Comparer
+                            </label>
+                        </div>
+                        <h3>Porsche Cayenne Coupé Turbo GT</h3>
+                        <p>La fusion époustouflante entre une supercar de circuit et un SUV haut de gamme. Freins céramique, toit en carbone et sonorité d'échappement envoûtante.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">4.0L V8 640ch</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">Tiptronic S 8</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">5 Places Sport Luxe</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">310 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Porsche Cayenne Coupé Turbo GT" data-price="310 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 13 -->
+                <article class="mag-card reveal clickable-card" data-category="suv" data-transmission="auto" data-name="Toyota Land Cruiser 300 VX-R Blindé" data-price="400 000 FCFA">
+                    <div class="mag-img">
+                        <span class="badge" style="position: absolute; top: 16px; right: 16px; z-index: 2; background: #8b0000; color: white;">Blindage Certifié B6</span>
+                        <img src="./assets/images/fleet_gwagon.png" alt="Toyota Land Cruiser 300 Blindé" style="filter: sepia(0.3) brightness(0.9);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Sécurité Diplomatique</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Land Cruiser 300" data-price="400 000" data-motor="3.3L V6 Twin-Turbo" data-places="7"> Comparer
+                            </label>
+                        </div>
+                        <h3>Toyota Land Cruiser 300 VX-R Blindé</h3>
+                        <p>Le véhicule de sécurité officiel le plus plébiscité en Afrique. Protection balistique certifiée, pneus run-flat et sirènes diplomatiques embarquées en toute discrétion.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">3.3L V6 309ch</span></div>
+                            <div class="spec-item"><span class="spec-label">Blindage</span><span class="spec-value">Niveau B6 / VR7</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">7 Places Sécurisées</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Sécurité</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">400 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Toyota Land Cruiser 300 VX-R Blindé" data-price="400 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 14 -->
+                <article class="mag-card reveal reveal-delay-1 clickable-card" data-category="sedan" data-transmission="auto" data-name="Peugeot 508 PSE Exécutive" data-price="150 000 FCFA">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_sedan.png" alt="Peugeot 508 PSE" style="filter: hue-rotate(180deg);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Berline Hybride Rechargeable</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Peugeot 508 PSE" data-price="150 000" data-motor="1.6L Hybride 360ch" data-places="4"> Comparer
+                            </label>
+                        </div>
+                        <h3>Peugeot 508 PSE Exécutive</h3>
+                        <p>Une silhouette féline et un dynamisme électrifié de 360 chevaux. Intérieur i-Cockpit technologique avec sellerie Alcantara et finition bois brut.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">360ch 4WD Hybride</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">e-EAT8 Automatique</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places Confort</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">150 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Peugeot 508 PSE Exécutive" data-price="150 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 15 -->
+                <article class="mag-card reveal clickable-card" data-category="van" data-transmission="auto" data-name="Volkswagen Multivan T7 VIP" data-price="200 000 FCFA">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_suv.png" alt="Volkswagen Multivan T7" style="filter: hue-rotate(250deg) brightness(1.1);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Van Délégation & Staff</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Multivan T7" data-price="200 000" data-motor="1.4L eHybrid 218ch" data-places="7"> Comparer
+                            </label>
+                        </div>
+                        <h3>Volkswagen Multivan T7 VIP</h3>
+                        <p>Polyvalence, silence électrique en ville et confort de voyage exceptionnel. Parfait pour les équipes de direction et escortes médiatiques.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">218ch eHybrid</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">DSG 6 Rapports</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">7 Places Modulables</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Staff VIP</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">200 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Volkswagen Multivan T7 VIP" data-price="200 000 FCFA">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vehicle 16 -->
+                <article class="mag-card reveal reveal-delay-1 clickable-card" data-category="sedan" data-transmission="auto" data-name="Genesis G90 Long Wheelbase" data-price="260 000 FCFA">
+                    <div class="mag-img">
+                        <img src="./assets/images/fleet_sedan.png" alt="Genesis G90 LWB" style="filter: hue-rotate(280deg);">
+                    </div>
+                    <div class="mag-content">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <span class="text-caption">Berline Asiatique de Prestige</span>
+                            <label class="compare-toggle" onclick="event.stopPropagation();">
+                                <input type="checkbox" class="compare-checkbox" data-name="Genesis G90" data-price="260 000" data-motor="3.5L V6 Turbo e-S/C" data-places="4"> Comparer
+                            </label>
+                        </div>
+                        <h3>Genesis G90 Long Wheelbase</h3>
+                        <p>Le nouveau rival redoutable des berlines traditionnelles. Silence monacal, parfumeur d'ambiance embarqué et portières à fermeture motorisée automatique.</p>
+                        <div class="mag-specs-grid">
+                            <div class="spec-item"><span class="spec-label">Moteur</span><span class="spec-value">3.5L V6 415ch</span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">Auto 8 AWD</span></div>
+                            <div class="spec-item"><span class="spec-label">Capacité</span><span class="spec-value">4 Places First Class</span></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                            <div>
+                                <span style="font-size: var(--text-xs); color: var(--color-stone);">Tarif Corporate</span>
+                                <div style="font-size: var(--text-2xl); font-weight: 800; color: var(--color-graphite);">260 000 FCFA <span style="font-size: var(--text-xs); font-weight: 400;">/ jour</span></div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-book-modal" data-name="Genesis G90 Long Wheelbase" data-price="260 000 FCFA">Réserver</button>
                         </div>
                     </div>
                 </article>
@@ -255,6 +600,82 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    <!-- PREMIUM BOOKING POP-UP MODAL -->
+    <div id="booking-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+        <div class="modal-content booking-modal-content">
+            <button class="close-modal close-booking-modal" aria-label="Fermer la fenêtre">&times;</button>
+            
+            <div class="booking-modal-header">
+                <span class="badge" style="background: var(--color-copper); color: white; margin-bottom: 8px;">Réservation Express VIP</span>
+                <h2 id="booking-modal-title">Demande de Mise à Disposition</h2>
+                <div class="selected-car-recap">
+                    <span id="recap-car-name" style="font-weight: 800; font-size: var(--text-lg); color: var(--color-graphite);">Véhicule sélectionné</span>
+                    <span id="recap-car-price" class="recap-price" style="font-weight: 700; color: var(--color-copper);">0 FCFA / jour</span>
+                </div>
+            </div>
+
+            <form id="booking-modal-form" class="booking-form" style="margin-top: var(--space-lg);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                    <div class="form-group">
+                        <label for="book-fullname" style="display:block; font-size:var(--text-xs); font-weight:700; margin-bottom:6px;">Nom & Prénom <span style="color:red;">*</span></label>
+                        <input type="text" id="book-fullname" class="form-control" placeholder="Ex: S.E.M. Kouassi Jean" required style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.15); background:var(--color-warm-white);">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-whatsapp" style="display:block; font-size:var(--text-xs); font-weight:700; margin-bottom:6px;">Numéro WhatsApp <span style="color:red;">*</span></label>
+                        <input type="tel" id="book-whatsapp" class="form-control" placeholder="Ex: +225 07 00 00 00 00" required style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.15); background:var(--color-warm-white);">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                    <div class="form-group">
+                        <label for="book-country" style="display:block; font-size:var(--text-xs); font-weight:700; margin-bottom:6px;">Pays d'intervention</label>
+                        <select id="book-country" class="form-control" style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.15); background:var(--color-warm-white);">
+                            <option value="Côte d'Ivoire">Côte d'Ivoire (Abidjan / Assinie)</option>
+                            <option value="Sénégal">Sénégal (Dakar / Saly)</option>
+                            <option value="Togo">Togo (Lomé)</option>
+                            <option value="Autre région">Autre région Ouest-Africaine</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-city" style="display:block; font-size:var(--text-xs); font-weight:700; margin-bottom:6px;">Ville <span style="color:red;">*</span></label>
+                        <input type="text" id="book-city" class="form-control" placeholder="Ex: Abidjan" required style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.15); background:var(--color-warm-white);">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-district" style="display:block; font-size:var(--text-xs); font-weight:700; margin-bottom:6px;">Quartier / Lieu exact <span style="color:red;">*</span></label>
+                        <input type="text" id="book-district" class="form-control" placeholder="Ex: Cocody Ambassades" required style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.15); background:var(--color-warm-white);">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+                    <div class="form-group">
+                        <label for="book-start-date" style="display:block; font-size:var(--text-xs); font-weight:700; margin-bottom:6px;">Date & Heure Prise en charge <span style="color:red;">*</span></label>
+                        <input type="datetime-local" id="book-start-date" class="form-control" required style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.15); background:var(--color-warm-white);">
+                    </div>
+                    <div class="form-group">
+                        <label for="book-end-date" style="display:block; font-size:var(--text-xs); font-weight:700; margin-bottom:6px;">Date & Heure Restitution <span style="color:red;">*</span></label>
+                        <input type="datetime-local" id="book-end-date" class="form-control" required style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.15); background:var(--color-warm-white);">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 20px; background: rgba(184, 115, 51, 0.06); padding: 16px; border-radius: 8px; border: 1px solid rgba(184, 115, 51, 0.2);">
+                    <label style="display:block; font-size:var(--text-xs); font-weight:800; color:var(--color-copper); margin-bottom:10px; text-transform:uppercase;">✨ Options Exécutives Incluses / Sélectionnables</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: var(--text-xs); font-weight: 600;">
+                        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="checkbox" checked disabled> 👔 Chauffeur Privé Bilingue VIP</label>
+                        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="checkbox" id="opt-escort"> 🛬 Accueil Salon VIP & Escorte Aéroport</label>
+                        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="checkbox" id="opt-armor"> 🛡️ Option Blindage B6/VR7</label>
+                        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="checkbox" id="opt-wifi" checked> 📶 Wi-Fi 5G & Rafraîchissements Prestige</label>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 24px;">
+                    <label for="book-notes" style="display:block; font-size:var(--text-xs); font-weight:700; margin-bottom:6px;">Exigences particulières ou protocole de sécurité</label>
+                    <textarea id="book-notes" class="form-control" rows="3" placeholder="Précisez vos besoins : cortège officiel, itinéraire spécifique, préférences de rafraîchissements..." style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.15); background:var(--color-warm-white); font-family:inherit;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-copper" style="width: 100%; min-height: 52px; font-size: var(--text-base); font-weight: 700; box-shadow: 0 10px 25px rgba(184, 115, 51, 0.3);">💬 Transmettre la Réservation VIP via WhatsApp</button>
+                <p style="text-align:center; font-size: 11px; color: var(--color-stone); margin-top: 12px;">🔒 Vos données sont traitées selon le plus strict protocole de confidentialité diplomatique de Motion Drive.</p>
+            </form>
         </div>
     </div>
 

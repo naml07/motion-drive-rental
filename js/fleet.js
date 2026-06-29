@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initComparison();
     parseUrlParams();
     initMobileToggle();
+    initBookingModal();
 });
 
 function initMobileToggle() {
@@ -197,8 +198,105 @@ function renderComparisonModal() {
         </tr>
         <tr>
             <th style="padding: 16px;"></th>
-            <td style="padding: 16px;"><a href="contact.html?subject=${encodeURIComponent(v1.name)}" class="btn btn-primary" style="width: 100%;">Réserver ${v1.name}</a></td>
-            <td style="padding: 16px;"><a href="contact.html?subject=${encodeURIComponent(v2.name)}" class="btn btn-primary" style="width: 100%;">Réserver ${v2.name}</a></td>
+            <td style="padding: 16px;"><button type="button" class="btn btn-primary btn-book-modal" data-name="${v1.name}" data-price="${v1.price} FCFA" style="width: 100%;">Réserver ${v1.name}</button></td>
+            <td style="padding: 16px;"><button type="button" class="btn btn-primary btn-book-modal" data-name="${v2.name}" data-price="${v2.price} FCFA" style="width: 100%;">Réserver ${v2.name}</button></td>
         </tr>
     `;
+}
+
+function initBookingModal() {
+    const modal = document.getElementById('booking-modal');
+    const closeBtns = document.querySelectorAll('.close-booking-modal');
+    const form = document.getElementById('booking-modal-form');
+    const recapName = document.getElementById('recap-car-name');
+    const recapPrice = document.getElementById('recap-car-price');
+
+    if (!modal) return;
+
+    const openModal = (carName, carPrice) => {
+        if (recapName) recapName.textContent = carName || 'Véhicule de Prestige';
+        if (recapPrice) recapPrice.textContent = carPrice ? `${carPrice}` : 'Tarif sur demande';
+        
+        const now = new Date();
+        const startInput = document.getElementById('book-start-date');
+        const endInput = document.getElementById('book-end-date');
+        if (startInput && !startInput.value) {
+            const tomorrow = new Date(now.getTime() + 24*60*60*1000);
+            tomorrow.setMinutes(0);
+            startInput.value = tomorrow.toISOString().slice(0, 16);
+        }
+        if (endInput && !endInput.value) {
+            const afterTomorrow = new Date(now.getTime() + 4*24*60*60*1000);
+            afterTomorrow.setMinutes(0);
+            endInput.value = afterTomorrow.toISOString().slice(0, 16);
+        }
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('click', (e) => {
+        const bookBtn = e.target.closest('.btn-book-modal');
+        const card = e.target.closest('.clickable-card');
+        
+        if (bookBtn) {
+            e.preventDefault();
+            e.stopPropagation();
+            const name = bookBtn.getAttribute('data-name') || card?.getAttribute('data-name');
+            const price = bookBtn.getAttribute('data-price') || card?.getAttribute('data-price');
+            openModal(name, price);
+            return;
+        }
+
+        if (card && !e.target.closest('.compare-toggle') && !e.target.closest('input')) {
+            const name = card.getAttribute('data-name');
+            const price = card.getAttribute('data-price');
+            openModal(name, price);
+        }
+    });
+
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const fullname = document.getElementById('book-fullname')?.value || '';
+            const whatsapp = document.getElementById('book-whatsapp')?.value || '';
+            const country = document.getElementById('book-country')?.value || '';
+            const city = document.getElementById('book-city')?.value || '';
+            const district = document.getElementById('book-district')?.value || '';
+            const startDate = document.getElementById('book-start-date')?.value || '';
+            const endDate = document.getElementById('book-end-date')?.value || '';
+            const notes = document.getElementById('book-notes')?.value || '';
+            
+            const escort = document.getElementById('opt-escort')?.checked ? 'Oui' : 'Non';
+            const armor = document.getElementById('opt-armor')?.checked ? 'Oui' : 'Non';
+            const car = recapName ? recapName.textContent : 'Véhicule';
+
+            const msg = `👑 *RÉSERVATION VIP - MOTION DRIVE* 👑\n\n` +
+                        `🚘 *Véhicule* : ${car}\n` +
+                        `👤 *Client* : ${fullname}\n` +
+                        `📞 *WhatsApp* : ${whatsapp}\n` +
+                        `📍 *Lieu* : ${district}, ${city} (${country})\n\n` +
+                        `📅 *Prise en charge* : ${startDate}\n` +
+                        `📅 *Restitution* : ${endDate}\n\n` +
+                        `🛡️ *Option Blindage* : ${armor}\n` +
+                        `🛬 *Accueil Salon VIP* : ${escort}\n\n` +
+                        `💬 *Notes / Protocole* : ${notes || 'Aucun'}`;
+
+            const encoded = encodeURIComponent(msg);
+            const waUrl = `https://wa.me/2250700000000?text=${encoded}`;
+            
+            closeModal();
+            window.open(waUrl, '_blank');
+        });
+    }
 }
