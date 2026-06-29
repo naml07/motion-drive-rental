@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ==========================================================================
  * MOTION DRIVE - VEHICLE SEARCH ENGINE
  * ==========================================================================
@@ -46,7 +46,7 @@ function initSearchEngine() {
             submitBtn.disabled = true;
 
             setTimeout(() => {
-                window.location.href = `flotte.html?category=${encodeURIComponent(category)}&location=${encodeURIComponent(pickupLoc)}`;
+                window.location.href = `catalogue.html?category=${encodeURIComponent(category)}&location=${encodeURIComponent(pickupLoc)}`;
             }, 600);
         });
     }
