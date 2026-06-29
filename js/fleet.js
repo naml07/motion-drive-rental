@@ -8,45 +8,70 @@ document.addEventListener('DOMContentLoaded', () => {
     initFilters();
     initComparison();
     parseUrlParams();
+    initMobileToggle();
 });
+
+function initMobileToggle() {
+    const toggleBtn = document.getElementById('mobile-filter-toggle');
+    const filtersContent = document.getElementById('filters-content');
+    const toggleIcon = document.getElementById('filter-toggle-icon');
+
+    if (toggleBtn && filtersContent) {
+        toggleBtn.addEventListener('click', () => {
+            const isOpen = filtersContent.classList.toggle('open');
+            toggleBtn.setAttribute('aria-expanded', isOpen);
+            if (toggleIcon) {
+                toggleIcon.textContent = isOpen ? '▲' : '▼';
+            }
+        });
+    }
+}
 
 function initFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const transSelect = document.getElementById('filter-trans');
-    const sortSelect = document.getElementById('sort-price');
-    const cards = document.querySelectorAll('.mag-card');
+    const searchInput = document.getElementById('fleet-search-input');
 
     if (!filterBtns.length) return;
+
+    const triggerFiltering = () => {
+        const activeBtn = document.querySelector('.filter-btn.active');
+        const category = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+        const trans = transSelect ? transSelect.value : 'all';
+        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+        applyFilters(category, trans, query);
+    };
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
-            const category = btn.getAttribute('data-filter');
-            applyFilters(category, transSelect ? transSelect.value : 'all');
+            triggerFiltering();
         });
     });
 
     if (transSelect) {
-        transSelect.addEventListener('change', () => {
-            const activeBtn = document.querySelector('.filter-btn.active');
-            const category = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
-            applyFilters(category, transSelect.value);
-        });
+        transSelect.addEventListener('change', triggerFiltering);
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', triggerFiltering);
     }
 }
 
-function applyFilters(category, transmission) {
+function applyFilters(category, transmission, searchQuery = '') {
     const cards = document.querySelectorAll('.mag-card');
     cards.forEach(card => {
         const cardCat = card.getAttribute('data-category');
         const cardTrans = card.getAttribute('data-transmission');
+        const title = card.querySelector('h3') ? card.querySelector('h3').textContent.toLowerCase() : '';
+        const desc = card.querySelector('p') ? card.querySelector('p').textContent.toLowerCase() : '';
         
         const matchCat = (category === 'all' || cardCat === category);
         const matchTrans = (transmission === 'all' || cardTrans === transmission);
+        const matchQuery = !searchQuery || title.includes(searchQuery) || desc.includes(searchQuery);
 
-        if (matchCat && matchTrans) {
+        if (matchCat && matchTrans && matchQuery) {
             card.style.display = 'flex';
             setTimeout(() => card.style.opacity = '1', 10);
         } else {
@@ -59,10 +84,22 @@ function applyFilters(category, transmission) {
 function parseUrlParams() {
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('category');
-    if (category) {
+    const location = urlParams.get('location');
+    const searchInput = document.getElementById('fleet-search-input');
+
+    if (category && category !== 'all') {
         const btn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
         if (btn) {
             btn.click();
+        }
+    }
+
+    if (location && location !== 'all') {
+        if (location === 'mercedes' || location === 'rangerover') {
+            if (searchInput) {
+                searchInput.value = location === 'mercedes' ? 'mercedes' : 'range rover';
+                searchInput.dispatchEvent(new Event('input'));
+            }
         }
     }
 }

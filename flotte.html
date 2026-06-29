@@ -64,21 +64,33 @@
         </div>
     </section>
 
-    <!-- FILTERS BAR -->
+    <!-- FILTERS BAR & LIVE SEARCH -->
     <section class="filters-section" role="search" aria-label="Filtres de flotte">
-        <div class="container filters-wrapper">
-            <div class="filter-group">
-                <button class="filter-btn active" data-filter="all">Toute la collection (6)</button>
-                <button class="filter-btn" data-filter="suv">SUV 4x4 de Prestige (3)</button>
-                <button class="filter-btn" data-filter="sedan">Berlines Exécutives (2)</button>
-                <button class="filter-btn" data-filter="van">Vans & Cortèges (1)</button>
-            </div>
-            
-            <div class="filter-group">
-                <select id="filter-trans" class="filter-select" aria-label="Filtrer par transmission">
-                    <option value="all">Transmission : Toutes</option>
-                    <option value="auto">Automatique 9G-Tronic</option>
-                </select>
+        <div class="container">
+            <!-- MOBILE TOGGLE BUTTON -->
+            <button id="mobile-filter-toggle" class="mobile-filter-toggle-btn" aria-expanded="false">
+                <span>🔍 Filtrer & Rechercher un Véhicule</span>
+                <span id="filter-toggle-icon" style="font-size: 12px;">▼</span>
+            </button>
+
+            <div id="filters-content" class="filters-wrapper">
+                <div class="fleet-search-box">
+                    <input type="text" id="fleet-search-input" placeholder="Rechercher par modèle (ex: Mercedes, Range Rover, V6)..." class="fleet-search-input" aria-label="Rechercher un véhicule">
+                </div>
+
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">Toute la collection (6)</button>
+                    <button class="filter-btn" data-filter="suv">SUV 4x4 de Prestige (3)</button>
+                    <button class="filter-btn" data-filter="sedan">Berlines Exécutives (2)</button>
+                    <button class="filter-btn" data-filter="van">Vans & Cortèges (1)</button>
+                </div>
+                
+                <div class="filter-group">
+                    <select id="filter-trans" class="filter-select" aria-label="Filtrer par transmission">
+                        <option value="all">Transmission : Toutes</option>
+                        <option value="auto">Automatique 9G-Tronic</option>
+                    </select>
+                </div>
             </div>
         </div>
     </section>

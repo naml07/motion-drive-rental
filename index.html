@@ -118,25 +118,23 @@
                 <div id="search-section" class="search-module-pill reveal reveal-delay-2" role="search">
                     <form class="search-form-pill" action="flotte.html" method="GET">
                         <div class="pill-group">
-                            <label for="pickup-loc">La Marque / Ville</label>
-                            <select id="pickup-loc" name="location" class="pill-control" aria-label="Ville ou Marque">
-                                <option value="all">Toutes les marques & villes</option>
-                                <option value="abidjan">Abidjan — Côte d'Ivoire</option>
-                                <option value="dakar">Dakar — Sénégal</option>
-                                <option value="lome">Lomé — Togo</option>
-                                <option value="rangerover">Range Rover / Land Rover</option>
-                                <option value="mercedes">Mercedes-Benz</option>
+                            <label for="pickup-loc">Départ / Marque</label>
+                            <select id="pickup-loc" name="location" class="pill-control" aria-label="Lieu ou Marque">
+                                <option value="all">Abidjan — Aéroport FHB</option>
+                                <option value="plateau">Abidjan — Plateau / Cocody</option>
+                                <option value="dakar">Dakar — Aéroport Blaise Diagne</option>
+                                <option value="lome">Lomé — Centre Ville</option>
                             </select>
                         </div>
 
                         <div class="pill-divider"></div>
 
                         <div class="pill-group">
-                            <label for="vehicle-model">Modèle / Catégorie</label>
-                            <select id="vehicle-model" name="category" class="pill-control" aria-label="Modèle">
-                                <option value="all">Tous les modèles</option>
-                                <option value="sedan">Berline Exécutive</option>
-                                <option value="suv">SUV 4x4 Prestige</option>
+                            <label for="vehicle-model">Catégorie</label>
+                            <select id="vehicle-model" name="category" class="pill-control" aria-label="Catégorie">
+                                <option value="all">Toutes les catégories</option>
+                                <option value="suv">SUV 4x4 de Prestige</option>
+                                <option value="sedan">Berlines Exécutives</option>
                                 <option value="luxe">Limousine & Luxe</option>
                             </select>
                         </div>
@@ -144,12 +142,26 @@
                         <div class="pill-divider"></div>
 
                         <div class="pill-group">
-                            <label for="daily-price">Prix Journalier</label>
-                            <select id="daily-price" name="price" class="pill-control" aria-label="Prix Journalier">
-                                <option value="all">Tous les tarifs</option>
-                                <option value="150">150 000 - 250 000 FCFA/j</option>
-                                <option value="250">250 000 - 450 000 FCFA/j</option>
-                                <option value="vip">450 000+ FCFA/j (Blindé/VIP)</option>
+                            <label for="pickup-date">Prise en charge</label>
+                            <input type="date" id="pickup-date" name="start_date" class="pill-control" aria-label="Date de prise en charge">
+                        </div>
+
+                        <div class="pill-divider"></div>
+
+                        <div class="pill-group">
+                            <label for="return-date">Restitution</label>
+                            <input type="date" id="return-date" name="end_date" class="pill-control" aria-label="Date de restitution">
+                        </div>
+
+                        <div class="pill-divider"></div>
+
+                        <div class="pill-group">
+                            <label for="daily-price">Tarif Max</label>
+                            <select id="daily-price" name="price" class="pill-control" aria-label="Tarif Max">
+                                <option value="all">Tous les prix</option>
+                                <option value="150">≤ 250 000 FCFA/j</option>
+                                <option value="250">≤ 450 000 FCFA/j</option>
+                                <option value="vip">450 000+ FCFA/j</option>
                             </select>
                         </div>
 
